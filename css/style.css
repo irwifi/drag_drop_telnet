@@ -66,6 +66,14 @@ body{
 	left: 15px;
 }
 
+.services-menu{
+	height: 580px;
+	background-color: green;
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+
 .main-footer .btn{
 	
 }
