@@ -14,11 +14,9 @@ body{
 	color: #222;
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
 }
-
-#toggle {
-	width: 100px;
-	height: 100px;
-	background: #ccc;
+main{
+	position: relative;
+	min-height: 600px;
 }
 
 .price{
@@ -38,15 +36,14 @@ body{
 	width: 500px;
 	height: 500px;
 	padding: 3rem;
-	text-align: center;
 	border-radius: 100%;
-	margin-bottom: 3rem;
+	margin: 0 auto;
 	position: relative;
 }
 .group{
 	position: absolute;
 	bottom: 100px;
-	left: 100px;
+	left: 60px;
 }
 
 .price .btn{
@@ -64,6 +61,7 @@ body{
 	position: absolute;
 	top: 0;
 	left: 15px;
+	display: none;
 }
 
 .services-menu{
@@ -71,22 +69,17 @@ body{
 	background-color: green;
 	position: absolute;
 	top: 0;
-	right: 15px;
+	right: 16px;
+	display: none;
 }
 
-.main-footer .btn{
-	
+footer{
+position: absolute;
+bottom: 0;
+width: 100%;
 }
 
-.main-footer{
-
-
-}
-
-.arrow{
-	
-}
-
-.price-menu{
-
+.servicesBtn{
+	margin-right: 10px;
+	width: 150px;
 }

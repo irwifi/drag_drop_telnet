@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
-$( "span" ).click(function() {
+	$(".arrow").click(function() {
+	  	$('.price-menu').toggle('slide', {direction: 'down'});
 
-  $( "#toggle" ).slideToggle( "slow", function(){
-  	console.log("whhoop!");
-  });
-});
+	});
 
+	$(".servicesBtn").click(function() {
+	  	$('.services-menu').toggle('slide', {direction: 'down'});
+
+	});
 
 }); // ready
 
