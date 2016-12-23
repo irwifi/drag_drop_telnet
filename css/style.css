@@ -16,11 +16,11 @@ body{
 }
 main{
 	position: relative;
-	min-height: 600px;
+	min-height: 768px;
 }
 
 .price{
-	background-color: #ccc;
+	background-color: gray;
 	height: 50px;
 	font-weight: bold;
 	padding-left: 10px;
@@ -33,17 +33,17 @@ main{
 .circle {
 	border: 1px solid #f2f2f2;
 	border: 1px solid red;
-	width: 500px;
+	width: 750px;
 	height: 500px;
 	padding: 3rem;
 	border-radius: 100%;
-	margin: 0 auto;
+	margin: 100px auto;
 	position: relative;
 }
 .group{
 	position: absolute;
 	bottom: 100px;
-	left: 60px;
+	left: 25px;
 }
 
 .price .btn{
@@ -56,21 +56,21 @@ main{
 }
 
 .price-menu{
-	height: 580px;
+	height: 768px;
 	background-color: orange;
 	position: absolute;
 	top: 0;
-	left: 15px;
+	left: 0px;
 	display: none;
 }
 
 .services-menu{
-	height: 580px;
+	height: 768px;
 	background-color: green;
 	position: absolute;
 	top: 0;
-	right: 16px;
-	display: none;
+	right: 0px;
+	/*display: none;*/
 }
 
 footer{
