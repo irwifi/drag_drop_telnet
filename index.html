@@ -4,83 +4,120 @@
 
   <meta charset="utf-8">
   <title>slide demo</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <meta name="viewport" content="width=1030, maximum-scale=1.0" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Css -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500,300,400&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
-  <!-- header -->
-<!-- <header>
-<nav>
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-
-</div>
-</div>
-</div>
-</nav>
-</header> -->
-
-<!-- Main content -->
-<main>
-  <div class="container-fluid ipad">
+  <main>
+  <div class="container-fluid">
     <div class="row">
+      <div class="col-sm-1 services-leftmenu">
+          <!-- LEFT SURVICE MENU UP ARROW BOTTON -->
+          <div id="navup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
 
-      <div class="col-sm-3 price-menu">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sed, quia laboriosam sequi facilis quidem itaque alias velit delectus, beatae molestiae dignissimos explicabo. Quibusdam architecto, explicabo hic. Laudantium, at, fugiat.</div>
 
-      <div class="col-sm-6 col-sm-offset-3">
+
+
+          <div class="serviceIcon">
+          <img src="img/service.png" alt="">
+          <div class="iconText">Mobil abbonnement</div>
+          <img src="img/service.png" alt="">
+          <div class="iconText">Mobil bredbånd</div>
+          <img src="img/service.png" alt="">
+          <div class="iconText">Bredbånd</div>
+          <img src="img/service.png" alt="">
+          <!-- <div class="iconText">TV</div>
+          <img src="img/service.png" alt="">
+          <div class="iconText">TV bredbånd</div>
+          <img src="img/service.png" alt="">
+          <div class="iconText">Services</div>
+          <img src="img/service.png" alt="">
+          <div class="iconText">Andet</div>
+          <img src="img/service.png" alt=""> -->
+          </div>
+
+
+
+          <!-- LEFT SURVICE MENU DOWN ARROW BOTTON -->
+          <div id="navdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        
+      </div>
+      <div class="col-sm-1 services-rightmenu">
+        <div class="serviceIcon">
+          This is the service icon
+        </div>
+      </div>
+      
+      <div class="col-sm-6 col-sm-offset-2">
         <div class="circle img-responsive">
           <div class="group">
-            <input type="text" placeholder="input">
-            <button class="btn"><i class="fa fa-user fa-3x"></i></button>
-            <button class="btn"><i class="fa fa-user fa-2x"></i></button>
+            <input type="text" placeholder="Navn">
+            <img id="parrent" src="img/voksen.png" alt="">
+            <img id="child" src="img/barn.png" alt="">
           </div>
         </div>
       </div>
+      
+      <!-- Bottom price boxes -->
+      <div class="col-sm-3 price-menu"></div>
 
-      <div class="col-sm-3 services-menu"></div>
+
     </div>
   </div>
   <!-- Main footer -->
   <footer class="main-footer">
+  <div class="col-sm-12">
+    <div class="continer-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <div class="price">
-            Nuværende løsning
-            <span class="kroner">
-              1.097 kr.
-            </span>
-            <button class="btn arrow" aria-label="Settings">
-              <i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+            <!-- LOGO -->
+            <img id="logo" src="img/logo.png" alt="">
+
+            <!-- CURRENT PRICE BOX -->
+            <div class="pricebox">
+              <div class="pricetext">Nuværende <span class="kroner">199</span> KR/MD</div> 
+              <img id="arrow" src="img/uparrow.jpg" alt="">
+            </div>
+
+            <!-- SOLUTION 1 (numer) -->
+            <div class="pricebox">
+              <div class="pricetext">Løsning 1 <span class="kroner">1999</span> KR/MD</div> 
+              <img src="img/uparrow.jpg" alt="">
+            </div>
+
+            <!-- SOLUTION 2 (numer) -->
+            <div class="pricebox">
+              <div class="pricetext">Løsning 2 <span class="kroner">1999</span> KR/MD</div> 
+              <img src="img/uparrow.jpg" alt="">
+            </div>
+
+            <!-- SETTING AND ADD SOLUTION -->
+            <button class="pull-right footerbtn">
+              <i class="fa fa-plus fa-2x"></i>
             </button>
-            <button class="btn pull-right" aria-label="Settings">
-              <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
-            </button>
-            <button class="btn pull-right" aria-label="Settings">
+            <button class="pull-right footerbtn" aria-label="Settings">
               <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
             </button>
-            <button class="btn-default pull-right servicesBtn">
-              Services
-            </button>
-          </div>
+            
         </div>
       </div>
+    </div>
   </footer>
 </main>
 
-
-
-<!-- All included scripts -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/main.js"></script>
+  <!-- All included scripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/main.js"></script>  
 </body>
 </html>
+

@@ -12,74 +12,140 @@ body{
 	font-size: 17px;
 	line-height: 1.5;
 	color: #222;
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
-}
-main{
-	position: relative;
-	min-height: 768px;
+	font-family: "Roboto", sans-serif;
+	max-height: 600px;
 }
 
-.price{
-	background-color: gray;
-	height: 50px;
-	font-weight: bold;
-	padding-left: 10px;
-}
+/*CENTER CONTENT*/
 
-.kroner {
-	font-size: 18px;
-}
 
 .circle {
-	border: 1px solid #f2f2f2;
-	border: 1px solid red;
-	width: 750px;
-	height: 500px;
+	border: 2px dashed #bababa ;
+	width: 485px;
+	height: 485px;
 	padding: 3rem;
 	border-radius: 100%;
-	margin: 100px auto;
+	margin: 20px auto 20px;
 	position: relative;
 }
+
+
+
 .group{
 	position: absolute;
 	bottom: 100px;
-	left: 25px;
+	left: 70px;
 }
 
-.price .btn{
-	width: 50px;
-	height: 50px;
+.group input {
+	width: 220px;
+	height: 60px;
+	border-radius: 25px;
+	border: 8px solid #efeded;
+	padding-left: 10px;
 }
 
-.ipad{
+
+
+/*SERVICE MENUS*/
+
+.services-leftmenu{
+	width: 130px;
+	height: 525px;
+	background-color: green;
 	position: relative;
+	text-align: center;
 }
 
-.price-menu{
-	height: 768px;
-	background-color: orange;
+.services-leftmenu img {
+	margin-top: 35px;
+}
+
+.services-leftmenu div#navup,
+.services-leftmenu div#navdown{
+	width: 130px;
+	height: 30px;
+	background-color: red;
+	text-align: center;
 	position: absolute;
+	left: 0;
+}
+
+.services-leftmenu div#navup {
 	top: 0;
-	left: 0px;
+}
+
+.services-leftmenu div#navdown {
+	bottom: 0;
+}
+
+.services-rightmenu{
+	width: 130px;
+	height: 525px;
+	background-color: lightgray;
 	display: none;
 }
 
-.services-menu{
-	height: 768px;
-	background-color: green;
+
+
+/*FOOTER*/
+
+.price-menu{
+	height: 525px;
+	width: 254px;
+	background-color: #af5aff;
 	position: absolute;
 	top: 0;
-	right: 0px;
-	/*display: none;*/
+	left: 130px;
+	display: none;
+}
+
+.pricebox{
+	width: 250px;
+	height: 75px;
+	/*background-color: gray;*/
+	display: inline-block;
+	vertical-align: top;
+	line-height: 70px;
+}
+
+.pricebox .pricetext{
+	float: left;
+	padding-left: 10px;
+	color: white;
+	font-size: 16px;
+}
+
+.pricebox .kroner {
+	font-size: 22px;
+	font-weight: bold;
+
+}
+
+.pricebox img{
+	float: right;
+	margin-right: -5px;
+	cursor: pointer;
+}
+
+#logo{
+	display: inline-block;
+	width: 130px;
+	height: 75px;
+	margin-right: -5px;
+	border-right: 1px solid #af5aff;
+}
+
+.footerbtn {
+	width: 60px;
+	height: 75px;
+	border: none;
+	border-left: 1px solid #af5aff;
+	background-color: #9b0ce4;
+	color: white;
 }
 
 footer{
-position: absolute;
-bottom: 0;
-width: 100%;
-}
-
-.servicesBtn{
-	margin-right: 10px;
-	width: 150px;
+	background-color: #9b0ce4;
+	height: 75px;
 }
