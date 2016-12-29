@@ -18,7 +18,8 @@ body{
 
 /*remove default orange focus border*/
 button:focus,
-input:focus{
+input:focus,
+.serviceIcon{
 	outline: none;
 }
 
@@ -68,6 +69,7 @@ input:focus{
 	text-align: center;
 	/*overflow-y: scroll;*/
 	overflow: hidden;
+	/*background-color: orange;*/
 }
 
 .services-leftmenu img {
@@ -80,8 +82,8 @@ input:focus{
 	border-bottom: 1px solid #d8d8d8;
 }
 
-.services-leftmenu div#navup,
-.services-leftmenu div#navdown{
+.slidernavigation div#navup,
+.slidernavigation div#navdown{
 	width: 130px;
 	height: 30px;
 	/*background-color: red;*/
@@ -90,12 +92,13 @@ input:focus{
 	left: 0;
 }
 
-.services-leftmenu div#navup {
+.slidernavigation div#navup {
 	top: 0;
+	z-index: 99999;
 }
 
-.services-leftmenu div#navdown {
-	bottom: 0;
+.slidernavigation div#navdown {
+	bottom: 75px;
 }
 
 .services-rightmenu{
@@ -121,12 +124,14 @@ input:focus{
 }
 
 
-.menuheader{
+.menuheader,
+.myservice{
 	color: white;
 }
 
 .menuheader h2{
 	font-size: 18px;
+	margin-left: 10px;
 }
 
 .myservice {
