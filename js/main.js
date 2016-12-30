@@ -24,17 +24,19 @@ $(document).ready(function(){
 		personWrapper
 		.css({
 		position: "absolute", 
-		left: 120, 
-		top: -180,
+		left: 190, 
+		top: 150,
 		'text-align': 'center',
 		color: 'lightgray',
 		'z-index': 99999 })
-		.draggable({
-			grid:[10,10],
-			containment: 'window' 
-		});
+		.draggable({ 
+      		grid:[10,10],
+      		containment: 'window',
+			stack: ".personWrapper"
+      	});
+		
 
-		$(".circle .content").append(personWrapper);
+		$(".circle").append(personWrapper);
 
 		$('#nameField').val('');
 	}
@@ -132,16 +134,18 @@ $(document).ready(function(){
 		// revert: true,
 		containment: 'window', // window // parrent
 		appendTo:'.circle',
-		helper: 'clone',
+		helper: function() {
+            return jQuery(this).clone().appendTo('.circle')
+        },
 		start: function(){
 			// $('.circle .content').text('Dragging started');
 
 		},
 		drag: function(){
-			// $('.circle .content').text('Dragging Right now');
+			// set highlight here
 		},
 		stop: function(){
-			$(this).apeendTo('.circle');
+			
 		}
 	});
 	
@@ -149,9 +153,12 @@ $(document).ready(function(){
 
 	// DROPPABLE CIRCLE AREA
 	$('.circle').droppable({
-		drop: function(){ // when something is dropped inside of the div
-			alert('Something was dropped here');
-		}
+		drop: function(event, ui) {
+    		 if (!ui.draggable.hasClass("dropped"))
+             jQuery(this).append(jQuery(ui.draggable).clone().addClass("dropped").draggable());
+  		}
+			
+		
 		// hoverClass: 'classFromYourCSS', // when you hover over this element it will add this class
 		// tolerance: 'pointer', // fit // pointer // touch
 		// appect: '', // this tell the div what to accept dropped inside of it // like ".name"
