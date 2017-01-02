@@ -13,6 +13,7 @@
   <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min">
   <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,45 +23,89 @@
   <div class="container-fluid">
     <div class="row">
       <div class="slidernavigation">
-        <div id="navup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-        <section class="col-sm-1 slider services-leftmenu">
-          <div class="serviceIcon">
-            <img id="mobil_ab" src="img/mobil_ab.png"><div class="iconText">Mobil abonnement</div>
-          </div>
-          <div class="serviceIcon">
-            <img id="mobil_bred" src="img/mobil_bred.png"><div class="iconText">Mobil bredbånd</div>
-          </div>
-          <div class="serviceIcon">
-            <img id="bredband" src="img/bredband.png"><div class="iconText">Bredbånd</div>
-          </div>
-          <div class="serviceIcon">
-            <img id="tv" src="img/tv.png"><div class="iconText">TV</div>
-          </div>
-          <div class="serviceIcon">
-            <img id="tvbredband" src="img/tvbredband.png"><div class="iconText">TV bredbånd</div>
-          </div>
-          <div class="serviceIcon">
-            <img id="services" src="img/services.png"><div class="iconText">Services</div>
-          </div>
-          <div class="serviceIcon">
-            <img id="andet" src="img/andet.png"><div class="iconText">Andet</div>
-          </div>
-        </section>
+        <div id="leftnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+          <section class="col-sm-1 leftslider services-leftmenu">
+            <div class="serviceIcon">
+              <img id="mobil_ab" src="img/mobil_ab.png">
+              <div class="iconText">Mobil abonnement</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="mobil_bred" src="img/mobil_bred.png">
+              <div class="iconText">Mobil bredbånd</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="bredband" src="img/bredband.png">
+              <div class="iconText">Bredbånd</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="tv" src="img/tv.png">
+              <div class="iconText">TV</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="tvbredband" src="img/tvbredband.png">
+              <div class="iconText">TV bredbånd</div>
+            </div>
+            <div class="nonedrag-serviceIcon servicesIconTrigger">
+              <img id="services" src="img/services.png">
+              <div class="iconText">Services</div>
+            </div>
+            <div class="nonedrag-serviceIcon andetIconTrigger">
+              <img id="andet" src="img/andet.png">
+              <div class="iconText">Andet</div>
+            </div>
+          </section>
+        <div id="leftnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+      </div>
 
-      
-          
-          <div id="navdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-        </div>
-
-        
-      <!-- </div> -->
-      <div class="col-sm-1 services-rightmenu shadowMe">
+  
+      <!-- <div class="col-sm-1 services-rightmenu shadowMe">
         <div class="serviceIcon">
           This is the service icon
         </div>
+      </div> -->
+
+
+      <div class="slidernavigation rightmenu-hidden">
+        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+            <div class="serviceIcon">
+              <img id="mobil_ab" src="img/mobil_ab.png">
+              <div class="iconText">Service1</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="mobil_bred" src="img/mobil_bred.png">
+              <div class="iconText">Service2</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="bredband" src="img/bredband.png">
+              <div class="iconText">Service3</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="tv" src="img/tv.png">
+              <div class="iconText">Service4</div>
+            </div>
+            <div class="serviceIcon">
+              <img id="tvbredband" src="img/tvbredband.png">
+              <div class="iconText">Service5</div>
+            </div>
+            <div class="nonedrag-serviceIcon servicesIconTrigger">
+              <img id="services" src="img/services.png">
+              <div class="iconText">Service6</div>
+            </div>
+            <div class="nonedrag-serviceIcon andetIconTrigger">
+              <img id="andet" src="img/andet.png">
+              <div class="iconText">Service7</div>
+            </div>
+          </section>
+        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
       </div>
+
+
+
+
       
       <div class="col-sm-6 col-sm-offset-2">
+        <div id="dialog"></div>
         <div class="circle img-responsive">
           <div class="content">
             <div class="contentInput">
@@ -211,14 +256,14 @@
   </footer>
 </main>
 
-  <!-- All included scripts -->
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <!-- Touch punch -->
-  <script src="js/jquery.ui.touch-punch.min.js"></script>
-  <!-- SLICK 1.6 -->
-  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/main.js"></script>
+<!-- All included scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!-- Touch punch -->
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<!-- SLICK 1.6 -->
+<script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
