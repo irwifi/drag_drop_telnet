@@ -84,6 +84,9 @@ input:focus,
 
 
 /*SERVICE MENUS*/
+.sidebar2{
+	display: none;
+}
 
 .services-leftmenu,
 .services-rightmenu{

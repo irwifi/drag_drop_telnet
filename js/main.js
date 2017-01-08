@@ -20,14 +20,14 @@ $(document).ready(function(){
 			'name': '4EVERYTHING premium',
 			'icon': 'img/mobilab_100gb.png',
 			'price': 399,
-			'html':'100 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="399">100 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag price:399</div>'
 		},
 		{
 			'slug': 'shop_4everythinglight',
 			'name': '4EVERYTHING Light',
 			'icon': 'img/mobilab_50gb.png',
 			'price': 299,
-			'html':'50 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="299">50 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag price:299</div>'
 		},
 		{
 			'slug': 'shop_4sure',
@@ -355,6 +355,13 @@ $(document).ready(function(){
 			'price': 99,
 			'html' : 'Få alle dine favoritmagasiner og -blade i én app'
 		},
+		{
+			'slug': 'other',
+			'name':'other',
+			'icon':'img/flipp.png',
+			'price': 99,
+			'html' : '<div class="myservice"><span class="servicename other">Zetland</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
+		}
 	];	
 	
 
@@ -559,133 +566,132 @@ var dragged = false;
 var counterClones = 0;
 	//Service icons dragable
 	// Draggable element hidden outside container ->http://stackoverflow.com/questions/14155503/draggable-element-hidden-outside-container
-	$('.serviceIcon img').draggable({ 
-		opacity: 0.60,
-		// revert: true,
-		containment: 'window', // window // parrent
-		// appendTo:'.circle',
-		helper: function() {
-		// makes a clone of the icons
+	// $('.serviceIcon img').draggable({ 
+	// 	opacity: 0.60,
+	// 	// revert: true,
+	// 	containment: 'window', // window // parrent
+	// 	// appendTo:'.circle',
+	// 	helper: function() {
+	// 	// makes a clone of the icons
 
-		// console.log('dragged');
-			dragged = true;
-			// console.log($(this));
-			counterClones++;
-			$(this).attr('data-clone-num','clone'+counterClones);
-            return $(this).clone().appendTo('.circle');
+	// 	// console.log('dragged');
+	// 		dragged = true;
+	// 		// console.log($(this));
+	// 		counterClones++;
+	// 		$(this).attr('data-clone-num','clone'+counterClones);
+ //            return $(this).clone().appendTo('.circle');
 
 
-		},
-		drag: function(){
-			// set highlight here
-		},
-		stop: function(){
+	// 	},
+	// 	drag: function(){
+	// 		// set highlight here
+	// 	},
+	// 	stop: function(){
 			
-		},
+	// 	},
 		
-	});
+	// });
 
 	
 	
 
 	// DROPPABLE CIRCLE AREA
-	$('.circle').droppable({
-		// if dragged out of the div, remove icon
-		out: function (event, ui) {
-			// delete icon when dragged out of circle
-			// console.log(ui)
-            var self = ui;
-            ui.helper.off('mouseup').on('mouseup', function () {
-                $(this).remove();
-                self.draggable.remove();
+	// $('.circle').droppable({
+	// 	// if dragged out of the div, remove icon
+	// 	out: function (event, ui) {
+	// 		// delete icon when dragged out of circle
+	// 		// console.log(ui)
+ //            var self = ui;
+ //            ui.helper.off('mouseup').on('mouseup', function () {
+ //                $(this).remove();
+ //                self.draggable.remove();
 
-                //delete 
-                var serviceToRemove = $(this).data('clone-num');
-                console.log(serviceToRemove)
-                $(".myservice[data-clone-service='"+serviceToRemove+"']").remove();
-                // alert("maybe ?");
-            });
+ //                //delete 
+ //                var serviceToRemove = $(this).data('clone-num');
+ //                console.log(serviceToRemove)
+ //                $(".myservice[data-clone-service='"+serviceToRemove+"']").remove();
+ //                // alert("maybe ?");
+ //            });
 
-        },
-        // When icon is drop from the icon navigation menu
-		drop: function(event, ui) {
+ //        },
+ //        // When icon is drop from the icon navigation menu
+	// 	drop: function(event, ui) {
 		    
-			var service =$(ui.draggable).data('service');
-			console.log($(ui.draggable));
-			var newService='';
-			for (var i = 0; i < currentMenu.length; i++) {
-				if(currentMenu[i].slug == service){
-					newService = currentMenu[i].html;
-					console.log(newService);
-				}
-			}
+	// 		var service =$(ui.draggable).data('service');
+	// 		console.log($(ui.draggable));
+	// 		var newService='';
+	// 		for (var i = 0; i < currentMenu.length; i++) {
+	// 			if(currentMenu[i].slug == service){
+	// 				newService = currentMenu[i].html;
+	// 				console.log(newService);
+	// 			}
+	// 		}
 
-			var targetBox = $('.pricebox.active').data('box');
-			// Adding newservice if it has been dragged
-			if(dragged == true){
-				$('.'+targetBox+' .after_here').after(newService);
-                $(".currentprice .myservice:first").attr('data-clone-service','clone'+counterClones);
-				dragged = false;
-			}
-			// make sure not to duplicate icon when dragged in the circle
-    		 if (!ui.draggable.hasClass("dropped")){
-	             $(this).append(
-	             	$(ui.draggable)
-	             	.clone()
-	             	.addClass("dropped")
-	             	.draggable({stack: "img"})
-	             	.css({
-					position: "absolute", 
-					left: ui.position.left, 
-					top: ui.position.top,
-			        })
-	             )
-         	}
-         	var draggableId = ui.draggable.attr("id");
-         	if (draggableId === 'other'){
-         		$('#dialog').attr('title', 'Tilføj andet service')
-         		.html('<input type="text" placeholder="Navn" /><input type="number" placeholder="Beløb" /><input type="radio" />Pr. MD <input type="radio" />Engangsbeløb')
-	  			.dialog({
-	  				buttons: {
-	  				'Tilføj': function(){
+	// 		var targetBox = $('.pricebox.active').data('box');
+	// 		// Adding newservice if it has been dragged
+	// 		if(dragged == true){
+	// 			$('.'+targetBox+' .after_here').after(newService);
+ //                $(".currentprice .myservice:first").attr('data-clone-service','clone'+counterClones);
+	// 			dragged = false;
+	// 		}
+ //    		 if (!ui.draggable.hasClass("dropped")){
+	//              $(this).append(
+	//              	$(ui.draggable)
+	//              	.clone()
+	//              	.addClass("dropped")
+	//              	.draggable({stack: "img"})
+	//              	.css({
+	// 				position: "absolute", 
+	// 				left: ui.position.left, 
+	// 				top: ui.position.top,
+	// 		        })
+	//              )
+ //         	}
+ //         	var draggableId = ui.draggable.attr("id");
+ //         	if (draggableId === 'other'){
+ //         		$('#dialog').attr('title', 'Tilføj andet service')
+ //         		.html('<input type="text" placeholder="Navn" /><input type="number" placeholder="Beløb" /><input type="radio" />Pr. MD <input type="radio" />Engangsbeløb')
+	//   			.dialog({
+	//   				buttons: {
+	//   				'Tilføj': function(){
 	          		
 
-	          		if (true) {
-	          			$(this).dialog('close');
-	          		}
+	//           		if (true) {
+	//           			$(this).dialog('close');
+	//           		}
 
-	  			},
-	  		}, closeOnEscape: true,
-	  				draggable: false,
-	  				resizable: false,
-	  				show: 'fade',
-	          		hide: 'fade',
-	  				modal: true,  // you can't click anywhere else before you close the modal box
-	  				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
-			        dialogClass: 'sendMailDialog',
-			        width: 490,
-			        height: 305,
-			        'z-index': 999999
-	  			});
-         	}
-         	// if (ui.draggable.src('img/andet.png')) {alert('yes this is the other ICON')}
+	//   			},
+	//   		}, closeOnEscape: true,
+	//   				draggable: false,
+	//   				resizable: false,
+	//   				show: 'fade',
+	//           		hide: 'fade',
+	//   				modal: true,  // you can't click anywhere else before you close the modal box
+	//   				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
+	// 		        dialogClass: 'sendMailDialog',
+	// 		        width: 490,
+	// 		        height: 305,
+	// 		        'z-index': 999999
+	//   			});
+ //         	}
+ //         	// if (ui.draggable.src('img/andet.png')) {alert('yes this is the other ICON')}
 
-  		},
-  		accept: 'img'
-		// hoverClass: 'classFromYourCSS', // when you hover over this element it will add this class
-		// tolerance: 'pointer', // fit // pointer // touch
-		// appect: '', // this tell the div what to accept dropped inside of it // like ".name"
-		// over: function(){
-		// 	$('#drop').text('Something has hovered over me');
-		// },
-		// out: function(){
-		// 	$('#drop').text('Something has been dragget out of me');
-		// },
-		// drop: function(){
-		// 	$('#drop').text('Something was dropped inside of me!');
-		// }
+ //  		},
+ //  		accept: 'img'
+	// 	// hoverClass: 'classFromYourCSS', // when you hover over this element it will add this class
+	// 	// tolerance: 'pointer', // fit // pointer // touch
+	// 	// appect: '', // this tell the div what to accept dropped inside of it // like ".name"
+	// 	// over: function(){
+	// 	// 	$('#drop').text('Something has hovered over me');
+	// 	// },
+	// 	// out: function(){
+	// 	// 	$('#drop').text('Something has been dragget out of me');
+	// 	// },
+	// 	// drop: function(){
+	// 	// 	$('#drop').text('Something was dropped inside of me!');
+	// 	// }
 
-	});
+	// });
 
 
 
@@ -727,71 +733,109 @@ var counterClones = 0;
 	  	$('.SettingsBox').toggle('slide', {direction: 'down'});
 	});
 
-	//Add Solution
+	
 
 	var solution = 0;
+	startDraggable(solution);
+
+	//Add Solution
 	$('#addSolution').click(function(){
 		
-	    	solution++;
+	    	
 	    if(solution < 3){
 			$('#dialog').attr('title', 'Tilføj Løsning')
 	  			.text("Tilføj løsning")
 	  			//.html('<h1>Kopier løsning 1?</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>')
 	  			.dialog({
-	  				buttons: {// 'JA': function(){
+	  				buttons: [
+	  				{		
+						text: "Kopier pågælende løsning",
+			            "class": 'copy_btn',
+			            click: function() {
+			                solution++;
+							var cloneFrom = $('.pricebox.active').data('box');
+							var clonedPrice = $('.pricebox.active .pricetext .kroner').html();
 
-	  					// if ($(".price-solution1")[0]) {
-	  					// 	alert("it's alive");
-	  					// }else{
-	  					// 	alert("it's dead");
-	  					// }
+							$('.pricebox').removeClass('active');
+							// Add the menu in footer
+		          			var selector = $('.main-footer .row .SettingsBox');
+		          			var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
+							
+		          			var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">'+clonedPrice+'</span> KR/MD</div>');
+		          			var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
+		          			priceText.appendTo(priceBox);
+		          			arrow.appendTo(priceBox);
+		          			priceBox.insertBefore(selector);
 
-	  					// $(this).dialog('close');
-	  				//}, 
-	  				'tilføj ny løsning': function(){
-          			
-	          			//Change active bottom tab
-	          			$('.pricebox').removeClass('active');
+							//adding big circle
+							var clonedCircleContent = $('.circle[data-circle="'+cloneFrom+'"]').html();
+		          			$('.circles-container .circle').hide();
+		          			$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'">'+clonedCircleContent+'</div>');
+		          			startDraggable(solution);
 
-	          			// Add the menu in footer
-	          			var selector = $('.main-footer .row .SettingsBox');
-	          			var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'"></div>');
-	          			var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">0</span> KR/MD</div>');
-	          			var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
-	          			priceText.appendTo(priceBox);
-	          			arrow.appendTo(priceBox);
-	          			priceBox.insertBefore(selector);
+							//add the slide
+							var clonedSlideContent = $('.solution_box.'+cloneFrom).html();
+		          			var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'">'+clonedSlideContent+'</div>');
+		          			// var menuheader = $('<div class="menuheader after_here"></div>');
+		          			// var h2 = $('<h2>Månedlig ydelse</h2><hr>');
+		          			// h2.appendTo(menuheader)
+		          			// menuheader.appendTo(slide)
+		          			slide.insertAfter('.currentprice');
 
-	          			//adding big circle
-	          			$('.circles-container .circle').hide();
-	          			$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'"><div class="content"><div class="contentInput"> <input id="nameField" type="text" placeholder="Navn"> <img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png" alt=""></div></div> </div>');
-	          			reStartDraggable(solution);
+		  					$(this).dialog('close');
+		          			$('.sidebar1').hide();
+							$('.sidebar2').show();
+			            }
+	  				},
+	  				{ 
+	  					text: "tilføj ny løsning",
+			            click: function() {
+			                // Save code here
+			                solution++;
+		          			//Change active bottom tab
+		          			$('.pricebox').removeClass('active');
+
+		          			// Add the menu in footer
+		          			var selector = $('.main-footer .row .SettingsBox');
+		          			var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
+		          			var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">0</span> KR/MD</div>');
+		          			var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
+		          			priceText.appendTo(priceBox);
+		          			arrow.appendTo(priceBox);
+		          			priceBox.insertBefore(selector);
+
+		          			//adding big circle
+		          			$('.circles-container .circle').hide();
+		          			$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'"><div class="content"><div class="contentInput"> <input id="nameField" type="text" placeholder="Navn"> <img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png" alt=""></div></div> </div>');
+		          			startDraggable(solution);
 
 
-	          			//add the slide
-	          			var slide = $('<div class="col-sm-3 price-solution'+ solution +' newCircle'+ solution +'"></div>');
-	          			var menuheader = $('<div class="menuheader after_here"></div>');
-	          			var h2 = $('<h2>Månedlig ydelse</h2><hr>');
-	          			h2.appendTo(menuheader)
-	          			menuheader.appendTo(slide)
-	          			slide.insertAfter('.currentprice');
+		          			//add the slide
+		          			var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'"></div>');
+		          			var menuheader = $('<div class="menuheader after_here"></div>');
+		          			var h2 = $('<h2>Månedlig ydelse</h2><hr>');
+		          			h2.appendTo(menuheader)
+		          			menuheader.appendTo(slide)
+		          			slide.insertAfter('.currentprice');
 
-	          			//add the circle for slider
-	          			var circle = $('<div class="circle'+solution+' img-responsive"></div>');
-          				var content = $('<div class="content"></div>');
-          				var contentInput = $('<div class="contentInput"></div>');
-                        var buttons = $('<input id="nameField" type="text" placeholder="Navn"><img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png">');
-                        
-                        
-                        contentInput.appendTo(content);
-                        content.appendTo(circle);
-                        // $('.circle').hide();
-                        circle.insertAfter('.dialog');
+		          			//add the circle for slider
+		          			var circle = $('<div class="circle'+solution+' img-responsive"></div>');
+	          				var content = $('<div class="content"></div>');
+	          				var contentInput = $('<div class="contentInput"></div>');
+	                        var buttons = $('<input id="nameField" type="text" placeholder="Navn"><img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png">');
+	                        
+	                        
+	                        contentInput.appendTo(content);
+	                        content.appendTo(circle);
+	                        // $('.circle').hide();
+	                        circle.insertAfter('.dialog');
 
-	          			$(this).dialog('close');
-      		
-
-	  			}}, closeOnEscape: true,
+		          			$(this).dialog('close');
+		          			$('.sidebar1').hide();
+							$('.sidebar2').show();
+			            }
+	  				}
+	  			], closeOnEscape: true,
 	  				draggable: false,
 	  				resizable: false,
 	  				show: 'fade',
@@ -829,17 +873,31 @@ var counterClones = 0;
 	$(document).on('click', '.pricebox', function() {
 
 		var target = $(this).data('box');
-
+		var solution = $(this).data('num-solution');
+ 
 		$(".pricebox").removeClass('active');
+		$(".solution_box").removeClass('active');
 	  	$(".pricebox[data-box='"+ target+"']").addClass('active');
+	  	$(".solution_box."+ target).addClass('active');
 
 	  	$(".circle").hide();
 	  	$(".circle[data-circle='"+ target+"']").show();
+	  	startDraggable(solution);
+
+		//Show the proper sidebar
+		if(target == 'currentprice'){
+			$('.sidebar1').show();
+			$('.sidebar2').hide();
+		}else{
+			$('.sidebar1').hide();
+			$('.sidebar2').show();
+		}
+
   	});
 
 
 
-	function reStartDraggable(newTarget){
+	function startDraggable(newTarget){
 
 		console.log(newTarget);
 
@@ -882,8 +940,25 @@ var counterClones = 0;
 
                 //delete 
                 var serviceToRemove = $(this).data('clone-num');
-                console.log(serviceToRemove)
-                $(".myservice[data-clone-service='"+serviceToRemove+"']").remove();
+                console.log(serviceToRemove);
+                
+
+                //when it's not currentprice tab
+				if( !$('.pricebox[data-box="currentprice"]').hasClass('active') ){
+
+					var priceToRemove = $(".myservice[data-clone-service='"+serviceToRemove+"']").data('price');
+					priceToRemove = parseInt(priceToRemove);
+
+					var currentPrice = $('.pricebox.active .kroner').html();
+					currentPrice = parseInt(currentPrice);
+					
+					var newCurrentPrice = currentPrice - priceToRemove;
+
+					$('.pricebox.active .kroner').html(newCurrentPrice);
+				}
+
+
+				$(".myservice[data-clone-service='"+serviceToRemove+"']").remove();
                 // alert("maybe ?");
             });
 
@@ -891,26 +966,40 @@ var counterClones = 0;
         // When icon is drop from the icon navigation menu
 		drop: function(event, ui) {
 		    
-			var service = $(ui.draggable).data('service');
+			var service =$(ui.draggable).data('service');
 			console.log($(ui.draggable));
 			var newService='';
 			for (var i = 0; i < currentMenu.length; i++) {
 				if(currentMenu[i].slug == service){
 					newService = currentMenu[i].html;
 					console.log(newService);
+
+					//when it+s not currentprice tab
+					if( !$('.pricebox[data-box="currentprice"]').hasClass('active') ){
+						var newPrice = currentMenu[i].price;
+						var currentPrice = $('.pricebox.active .kroner').html();
+						currentPrice = parseInt(currentPrice);
+
+						var newCurrentPrice = currentPrice+ newPrice;
+						$('.pricebox.active .kroner').html(newCurrentPrice);
+					}
 				}
 			}
+
+			console.log($('.circle'+newTarget).position());
+			//calculating the distence when dropped
+			var offCircle = $('.circle'+newTarget).offset();
+			var newL = ui.offset.left - offCircle.left;
+			console.log(newL);
 
 			var targetBox = $('.pricebox.active').data('box');
 			// Adding newservice if it has been dragged
 			if(dragged == true){
-				console.log('we are here');
-				console.log(targetBox);
 				$('.'+targetBox+' .after_here').after(newService);
-                $(".currentprice .myservice:first").attr('data-clone-service','clone'+counterClones);
+                $("."+targetBox+" .myservice:first").attr('data-clone-service','clone'+counterClones);
 				dragged = false;
 			}
-			// make sure not to duplicate icon when dragged in the circle
+			 //dont copy when dragged in the box -> give it a class called dropped
     		 if (!ui.draggable.hasClass("dropped")){
 	             $(this).append(
 	             	$(ui.draggable)
@@ -919,26 +1008,51 @@ var counterClones = 0;
 	             	.draggable({stack: "img"})
 	             	.css({
 					position: "absolute", 
-					left: ui.position.left, 
+					left: newL, 
 					top: ui.position.top,
 			        })
 	             )
          	}
+         	console.log(ui);
          	var draggableId = ui.draggable.attr("id");
          	if (draggableId === 'other'){
          		$('#dialog').attr('title', 'Tilføj andet service')
-         		.html('<input type="text" placeholder="Navn" /><input type="number" placeholder="Beløb" /><input type="radio" />Pr. MD <input type="radio" />Engangsbeløb')
+         		.html('<input type="text" placeholder="Navn" class="name_other_dialog"/><input type="number" placeholder="Beløb"  class="number_other_dialog" /><input type="radio" />Pr. MD <input type="radio" />Engangsbeløb')
 	  			.dialog({
-	  				buttons: {
-	  				'Tilføj': function(){
-	          		
+	  				buttons: [
+	  				{
+	  					text: "Tilføj",
+			            click: function() {
+			            	//code here
+			            	var d_name = $('input.name_other_dialog').val();
+			            	var d_price = $('input.number_other_dialog').val();
+							var otherHtml = '';
 
-	          		if (true) {
-	          			$(this).dialog('close');
+			            	for (var i = 0; i < currentMenu.length; i++) {
+								if(currentMenu[i].slug == 'other'){
+									otherHtml = currentMenu[i].html;
+								}
+							}
+
+
+
+			            	$('.'+targetBox+' .after_here').after(otherHtml);
+                			$("."+targetBox+" .myservice:first").attr('data-clone-service','clone'+counterClones);
+
+                			$('.myservice[data-clone-service="clone'+counterClones+'"] .servicename').html(d_name);
+                			$('.myservice[data-clone-service="clone'+counterClones+'"] .serviceprice input').val(d_price);
+
+                			var currentprice = parseInt( $(".pricebox.active .kroner").html() );
+                			var newPrice = currentprice + parseInt(d_price);
+                			$(".pricebox.active .kroner").html(newPrice);
+
+			            	if (true) {
+			          			$(this).dialog('close');
+			          		}
+			            }
+
 	          		}
-
-	  			},
-	  		}, closeOnEscape: true,
+	  			], closeOnEscape: true,
 	  				draggable: false,
 	  				resizable: false,
 	  				show: 'fade',

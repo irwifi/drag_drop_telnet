@@ -22,318 +22,327 @@
   <main>
   <div class="container-fluid">
     <div class="row">
-      <div class="slidernavigation">
+      <div class="sidebar1">
+        <div class="slidernavigation">
+          <!-- CURRENT LEFT MENU -->
+          <!-- sidebar1 main  -->
+          <div id="leftnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 leftslider services-leftmenu">
+              <div class="serviceIcon">
+                <img data-service="mobilabonement" src="img/mobil_ab.png">
+                <div class="iconText">Mobil abonnement</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="mobilbred" src="img/mobil_bred.png">
+                <div class="iconText">Mobil bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="bredband" src="img/bredband.png">
+                <div class="iconText">Bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="tv" src="img/tv.png">
+                <div class="iconText">TV</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="tvbredband" src="img/tvbredband.png">
+                <div class="iconText">TV bredbånd</div>
+              </div>
+              <div class="nonedrag-serviceIcon servicesIconTrigger">
+                <img data-service="services" src="img/services.png">
+                <div class="iconText">Services</div>
+              </div>
+              <div class="serviceIcon andetIconTrigger">
+                <img id="other" src="img/andet.png">
+                <div class="iconText">Andet</div>
+              </div>
+            </section>
+          <div id="leftnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
 
-        <!-- CURRENT LEFT MENU -->
+        <!-- CURRENT RIGHT MENU (WHEN SERVICES IS CLICKED) -->
 
-        <div id="leftnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 leftslider services-leftmenu">
-            <div class="serviceIcon">
-              <img data-service="mobilabonement" src="img/mobil_ab.png">
-              <div class="iconText">Mobil abonnement</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="mobilbred" src="img/mobil_bred.png">
-              <div class="iconText">Mobil bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="bredband" src="img/bredband.png">
-              <div class="iconText">Bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="tv" src="img/tv.png">
-              <div class="iconText">TV</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="tvbredband" src="img/tvbredband.png">
-              <div class="iconText">TV bredbånd</div>
-            </div>
-            <div class="nonedrag-serviceIcon servicesIconTrigger">
-              <img data-service="services" src="img/services.png">
-              <div class="iconText">Services</div>
-            </div>
-            <div class="serviceIcon andetIconTrigger">
-              <img id="other" src="img/andet.png">
-              <div class="iconText">Andet</div>
-            </div>
-          </section>
-        <div id="leftnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
-
-      <!-- CURRENT RIGHT MENU (WHEN SERVICES IS CLICKED) -->
-
-      <div class="slidernavigation rightmenu-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="services_spotify"  src="img/spotify.png">
-              <div class="iconText">Spotify</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="services_hbo"  src="img/hbo.png">
-              <div class="iconText">HBO</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="services_storytell"  src="img/storytell.png">
-              <div class="iconText">Storytell</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="services_zetland" src="img/zetland.png">
-              <div class="iconText">Zetland</div>
-            </div>
-          </section>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
+        <!-- sidebar1 sub  -->
+        <div class="slidernavigation rightmenu-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="services_spotify"  src="img/spotify.png">
+                <div class="iconText">Spotify</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="services_hbo"  src="img/hbo.png">
+                <div class="iconText">HBO</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="services_storytell"  src="img/storytell.png">
+                <div class="iconText">Storytell</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="services_zetland" src="img/zetland.png">
+                <div class="iconText">Zetland</div>
+              </div>
+            </section>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+      </div><!-- sidebar1 -->
 
 
 
+      <div class="sidebar2">
+        <!-- SOLUTION1+2 LEFT MENU -->
+        <!-- sidebar2 main  -->
+        <div class="slidernavigation">
+          <div id="leftnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 leftslider services-leftmenu">
+              <div class="nonedrag-serviceIcon">
+                <img id="rightMenuTriggerMobilabonement" data-service="mobilabonement" src="img/mobil_ab.png">
+                <div class="iconText">Mobil abonnement</div>
+              </div>
+              <div class="nonedrag-serviceIcon">
+                <img id="rightMenuTriggerMobilbredband" data-service="mobilbred" src="img/mobil_bred.png">
+                <div class="iconText">Mobil bredbånd</div>
+              </div>
+              <div class="nonedrag-serviceIcon">
+                <img id="rightMenuTriggerBredband" data-service="bredband" src="img/bredband.png">
+                <div class="iconText">Bredbånd</div>
+              </div>
+              <div class="nonedrag-serviceIcon">
+                <img id="rightMenuTriggerTv" data-service="tv" src="img/tv.png">
+                <div class="iconText">TV</div>
+              </div>
+              <div class="nonedrag-serviceIcon">
+                <img id="rightMenuTriggerTvbredband" data-service="tvbredband" src="img/tvbredband.png">
+                <div class="iconText">TV bredbånd</div>
+              </div>
+              <div class="nonedrag-serviceIcon servicesIconTrigger">
+                <img id="rightMenuTriggerServices" data-service="services" src="img/services.png">
+                <div class="iconText">Services</div>
+              </div>
+              <div class="serviceIcon andetIconTrigger">
+                <img id="other" src="img/andet.png">
+                <div class="iconText">Andet</div>
+              </div>
+            </section>
+          <div id="leftnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+        
+        <!-- EVERTHING HEREUNDER IS RIGHT SOLUTION MENU'S -->
+        <!-- solutionMobilabonement -->
+        <!-- sidebar2 sub  -->
+        <div class="slidernavigation solutionMobilabonement-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="shop_4everything"  src="img/mobilab_100gb.png">
+                <div class="iconText">4EVERYTHING premium</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4everythinglight"  src="img/mobilab_50gb.png">
+                <div class="iconText">4EVERYTHING Light</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4sure"  src="img/mobilab_15gb.png">
+                <div class="iconText">4SURE Premium</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4fun" src="img/mobilab_8gb.png">
+                <div class="iconText">4FUN</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_ex199" src="img/html24.png">
+                <div class="iconText">Ekstra bruger</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_ex149" src="img/html24.png">
+                <div class="iconText">Ekstra bruger</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_ex99" src="img/html24.png">
+                <div class="iconText">Ekstra bruger</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_exjunior" src="img/html24.png">
+                <div class="iconText">Junior</div>
+              </div>
+            </section>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
 
+        <!-- solutionMobilbredbånd -->
+        <!-- sidebar2 sub  -->
+        <div class="slidernavigation solutionMobilbredband-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="shop_4lifepremplus"  src="img/mobil_bred_500gb.png">
+                <div class="iconText">4LIFE Premium Plus</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4lifeprem"  src="img/mobil_bred_100gb.png">
+                <div class="iconText">4LIFE Premium</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4lifefull" src="img/mobil_bred_30gb.png">
+                <div class="iconText">4LIFE Full</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4lifelight" src="img/mobil_bred_5gb.png">
+                <div class="iconText">4LIFE Light</div>
+              </div>
+            </section>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
 
-      <!-- SOLUTION1+2 LEFT MENU -->
-        <!-- <div id="leftnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 leftslider services-leftmenu">
-            <div class="nonedrag-serviceIcon">
-              <img id="rightMenuTriggerMobilabonement" data-service="mobilabonement" src="img/mobil_ab.png">
-              <div class="iconText">Mobil abonnement</div>
-            </div>
-            <div class="nonedrag-serviceIcon">
-              <img id="rightMenuTriggerMobilbredband" data-service="mobilbred" src="img/mobil_bred.png">
-              <div class="iconText">Mobil bredbånd</div>
-            </div>
-            <div class="nonedrag-serviceIcon">
-              <img id="rightMenuTriggerBredband" data-service="bredband" src="img/bredband.png">
-              <div class="iconText">Bredbånd</div>
-            </div>
-            <div class="nonedrag-serviceIcon">
-              <img id="rightMenuTriggerTv" data-service="tv" src="img/tv.png">
-              <div class="iconText">TV</div>
-            </div>
-            <div class="nonedrag-serviceIcon">
-              <img id="rightMenuTriggerTvbredband" data-service="tvbredband" src="img/tvbredband.png">
-              <div class="iconText">TV bredbånd</div>
-            </div>
-            <div class="nonedrag-serviceIcon servicesIconTrigger">
-              <img id="rightMenuTriggerServices" data-service="services" src="img/services.png">
-              <div class="iconText">Services</div>
-            </div>
-            <div class="serviceIcon andetIconTrigger">
-              <img id="other" src="img/andet.png">
-              <div class="iconText">Andet</div>
-            </div>
-          </section>
-        <div id="leftnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div> -->
-      
-      <!-- EVERTHING HEREUNDER IS RIGHT SOLUTION MENU'S -->
-      <!-- solutionMobilabonement -->
-      <div class="slidernavigation solutionMobilabonement-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="shop_4everything"  src="img/mobilab_100gb.png">
-              <div class="iconText">4EVERYTHING premium</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4everythinglight"  src="img/mobilab_50gb.png">
-              <div class="iconText">4EVERYTHING Light</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4sure"  src="img/mobilab_15gb.png">
-              <div class="iconText">4SURE Premium</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4fun" src="img/mobilab_8gb.png">
-              <div class="iconText">4FUN</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_ex199" src="img/html24.png">
-              <div class="iconText">Ekstra bruger</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_ex149" src="img/html24.png">
-              <div class="iconText">Ekstra bruger</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_ex99" src="img/html24.png">
-              <div class="iconText">Ekstra bruger</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_exjunior" src="img/html24.png">
-              <div class="iconText">Junior</div>
-            </div>
-          </section>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
+        <!-- solutionbredbånd -->
+        <!-- sidebar2 sub  -->
+        <div class="slidernavigation solutionBredband-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="shop_50mbitbredband"  src="img/bredband_50mbit.png">
+                <div class="iconText">50 Mbit Bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_30mbitbredband"  src="img/bredband_30mbit.png">
+                <div class="iconText">30 Mbit Bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_20mbitbredband"  src="img/bredband_20mbit.png">
+                <div class="iconText">20 Mbit Bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_Surfwave"  src="img/bredband_50mbit.png">
+                <div class="iconText">Surfwave</div>
+              </div>
+            </section>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
 
-      <!-- solutionMobilbredbånd -->
-      <div class="slidernavigation solutionMobilbredband-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="shop_4lifepremplus"  src="img/mobil_bred_500gb.png">
-              <div class="iconText">4LIFE Premium Plus</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4lifeprem"  src="img/mobil_bred_100gb.png">
-              <div class="iconText">4LIFE Premium</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4lifefull" src="img/mobil_bred_30gb.png">
-              <div class="iconText">4LIFE Full</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4lifelight" src="img/mobil_bred_5gb.png">
-              <div class="iconText">4LIFE Light</div>
-            </div>
-          </section>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
+        <!-- solutionTV -->
+        <!-- sidebar2 sub  -->
+        <div class="slidernavigation solutionTv-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="shop_4one"  src="img/tv_4one.png">
+                <div class="iconText">4ONE</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4more"  src="img/tv_4more.png">
+                <div class="iconText">4MORE</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4all"  src="img/tv_4all.png">
+                <div class="iconText">4ALL</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_tilvalgkanal9"  src="img/tilvalgskanaler9.png">
+                <div class="iconText">Tilvalgskanaler</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_tilvalgkanal19"  src="img/tilvalgskanaler19.png">
+                <div class="iconText">Tilvalgskanaler</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_tilvalgkanal29"  src="img/tilvalgskanaler29.png">
+                <div class="iconText">Tilvalgskanaler</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_tilvalgkanal39"  src="img/tilvalgskanaler39.png">
+                <div class="iconText">Tilvalgskanaler</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_barnpakke"  src="img/tvbredband_barnoghbo.png">
+                <div class="iconText">Børnepakke</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_cmorefilm"  src="img/tvbredband_cmorefilm.png">
+                <div class="iconText">C More Film</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_discchannel"  src="img/tvbredband_discovery.png">
+                <div class="iconText">Discovery-pakke</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_disney"  src="img/tvbredband_disney.png">
+                <div class="iconText">Disney-pakke</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_hbopakke"  src="img/tvbredband_barnoghbo.png">
+                <div class="iconText">HBO-pakke</div>
+              </div>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
 
-      <!-- solutionbredbånd -->
-      <div class="slidernavigation solutionBredband-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="shop_50mbitbredband"  src="img/bredband_50mbit.png">
-              <div class="iconText">50 Mbit Bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_30mbitbredband"  src="img/bredband_30mbit.png">
-              <div class="iconText">30 Mbit Bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_20mbitbredband"  src="img/bredband_20mbit.png">
-              <div class="iconText">20 Mbit Bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_Surfwave"  src="img/bredband_50mbit.png">
-              <div class="iconText">Surfwave</div>
-            </div>
-          </section>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
+        <!-- solutionTvBredbånd -->
+        <!-- sidebar2 sub  -->
+        <div class="slidernavigation solutionServices-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="shop_4allmedbredband"  src="img/tvbredband_50.png">
+                <div class="iconText">4ALL med Bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4moremedbredband"  src="img/tvbredband_28.png">
+                <div class="iconText">4MORE med Bredbånd</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_4onemedbredband"  src="img/tvbredband_17.png">
+                <div class="iconText">4ONE med Bredbånd</div>
+              </div>
+            </section>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
 
-      <!-- solutionTV -->
-      <div class="slidernavigation solutionTv-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="shop_4one"  src="img/tv_4one.png">
-              <div class="iconText">4ONE</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4more"  src="img/tv_4more.png">
-              <div class="iconText">4MORE</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4all"  src="img/tv_4all.png">
-              <div class="iconText">4ALL</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_tilvalgkanal9"  src="img/tilvalgskanaler9.png">
-              <div class="iconText">Tilvalgskanaler</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_tilvalgkanal19"  src="img/tilvalgskanaler19.png">
-              <div class="iconText">Tilvalgskanaler</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_tilvalgkanal29"  src="img/tilvalgskanaler29.png">
-              <div class="iconText">Tilvalgskanaler</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_tilvalgkanal39"  src="img/tilvalgskanaler39.png">
-              <div class="iconText">Tilvalgskanaler</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_barnpakke"  src="img/tvbredband_barnoghbo.png">
-              <div class="iconText">Børnepakke</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_cmorefilm"  src="img/tvbredband_cmorefilm.png">
-              <div class="iconText">C More Film</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_discchannel"  src="img/tvbredband_discovery.png">
-              <div class="iconText">Discovery-pakke</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_disney"  src="img/tvbredband_disney.png">
-              <div class="iconText">Disney-pakke</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_hbopakke"  src="img/tvbredband_barnoghbo.png">
-              <div class="iconText">HBO-pakke</div>
-            </div>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
-
-      <!-- solutionTvBredbånd -->
-      <div class="slidernavigation solutionServices-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="shop_4allmedbredband"  src="img/tvbredband_50.png">
-              <div class="iconText">4ALL med Bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4moremedbredband"  src="img/tvbredband_28.png">
-              <div class="iconText">4MORE med Bredbånd</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_4onemedbredband"  src="img/tvbredband_17.png">
-              <div class="iconText">4ONE med Bredbånd</div>
-            </div>
-          </section>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
-
-      <!-- solutionServices -->
-      <div class="slidernavigation solutionServices-hidden">
-        <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
-          <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
-            <div class="serviceIcon">
-              <img data-service="shop_spotify"  src="img/storytell.png">
-              <div class="iconText">Spotify Premium</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_hbo"  src="img/hbo.png">
-              <div class="iconText">HBO</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_storytell"  src="img/zetland.png">
-              <div class="iconText">Storytell</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_zetland"  src="img/zetland.png">
-              <div class="iconText">Zetland</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_teliaforsikring"  src="img/forsikring.png">
-              <div class="iconText">Telia Forsikring</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_roamlikehomeeurope"  src="img/roam.png">
-              <div class="iconText">Roam Like Home Europe</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_teliatv"  src="img/film.png">
-              <div class="iconText">Telia TV</div>
-            </div>
-            <div class="serviceIcon">
-              <img data-service="shop_flipp"  src="img/flipp.png">
-              <div class="iconText">Flipp</div>
-            </div>
-          </section>
-        <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
-      </div>
-
+        <!-- solutionServices -->
+        <!-- sidebar2 sub  -->
+        <div class="slidernavigation solutionServices-hidden">
+          <div id="rightnavup"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></div>
+            <section class="col-sm-1 rightslider services-leftmenu  shadowMe">
+              <div class="serviceIcon">
+                <img data-service="shop_spotify"  src="img/storytell.png">
+                <div class="iconText">Spotify Premium</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_hbo"  src="img/hbo.png">
+                <div class="iconText">HBO</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_storytell"  src="img/zetland.png">
+                <div class="iconText">Storytell</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_zetland"  src="img/zetland.png">
+                <div class="iconText">Zetland</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_teliaforsikring"  src="img/forsikring.png">
+                <div class="iconText">Telia Forsikring</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_roamlikehomeeurope"  src="img/roam.png">
+                <div class="iconText">Roam Like Home Europe</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_teliatv"  src="img/film.png">
+                <div class="iconText">Telia TV</div>
+              </div>
+              <div class="serviceIcon">
+                <img data-service="shop_flipp"  src="img/flipp.png">
+                <div class="iconText">Flipp</div>
+              </div>
+            </section>
+          <div id="rightnavdown"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+      </div> <!-- sidebar2 -->
 
 
       <!-- CIRCLE CONTENT -->
       <div class="col-sm-6 col-sm-offset-2 circles-container">
         <div id="dialog"></div>
-        <div class="circle img-responsive draggable-circle" data-circle="currentprice">
+        <div class="circle circle0 img-responsive draggable-circle" data-circle="currentprice">
           <div class="content">
             <div class="contentInput">
               <input id="nameField" type="text" placeholder="Navn">
@@ -354,7 +363,7 @@
       
       
       <!-- Bottom price boxes -->
-      <div class="col-sm-3 currentprice ">
+      <div class="col-sm-3 currentprice active">
         <div class="row after_here">
           <div class="menuheader">
             <h2>Månedlig ydelse</h2>
@@ -395,7 +404,7 @@
             <img id="logo" src="img/logo.png" alt="">
 
             <!-- CURRENT PRICE BOX -->
-            <div class="pricebox active" data-box="currentprice">
+            <div class="pricebox active" data-box="currentprice" data-num-solution='0'>
               <div class="pricetext">Nuværende <span class="kroner" id="currentPriceValue">0</span> KR/MD</div> 
               <img id="arrow" src="img/uparrow.jpg" alt="">
             </div>
