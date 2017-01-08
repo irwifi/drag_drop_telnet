@@ -13,8 +13,9 @@ body{
 	line-height: 1.5;
 	color: #222;
 	font-family: "Roboto", sans-serif;
-	max-height: 600px;
-	max-width: 1024px;
+	max-height: 800px;
+	/*max-width: 1024px;*/
+	/*width: 100%;*/
 }
 
 /*remove default orange focus border*/
@@ -55,6 +56,25 @@ input:focus,
 	padding-left: 10px;
 }
 
+.closeWrapper{
+	position: relative;
+}
+
+
+.DeleteBotton{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38px;
+	height: 38px;
+
+}
+
+.DeleteBotton:before {
+   font-family: FontAwesome;
+   content: "\f095";
+}
+
 .shadowMe{
 	-webkit-box-shadow: -11px 3px 5px -4px rgba(189,189,189,1);
 	-moz-box-shadow: -11px 3px 5px -4px rgba(189,189,189,1);
@@ -68,7 +88,7 @@ input:focus,
 .services-leftmenu,
 .services-rightmenu{
 	width: 130px;
-	height: 525px;
+	height: 653px;
 	position: relative;
 	text-align: center;
 	overflow: hidden;
@@ -116,6 +136,7 @@ input:focus,
 .slidernavigation div#rightnavdown{
 	bottom: 75px;
 	/*z-index: 99999;*/
+	/*background-color: orange;*/
 }
 
 /*.services-rightmenu{
@@ -129,7 +150,7 @@ input:focus,
 /*FOOTER*/
 /*CURRENT SOLUTION*/
 .currentprice{
-	height: 525px;
+	height: 653px;
 	width: 254px;
 	background-color: #af5aff;
 	position: absolute;
@@ -137,7 +158,7 @@ input:focus,
 	left: 130px;
 	display: none;
 	overflow-y: scroll;
-	z-index: 999999;
+	z-index: 10;
 }
 
 
@@ -161,10 +182,12 @@ input:focus,
 	border-radius: 10px;
 	border: none;
 	padding-left: 15px;
+	color:black;
 }
 
 .servicename {
 	font-size: 15px
+	width: 100px;
 }
 
 .serviceprice{
@@ -174,7 +197,7 @@ input:focus,
 
 /*SOLUTION 1*/
 .price-solution1{
-	height: 525px;
+	height: 653px;
 	width: 254px;
 	border-right: 1px solid white;
 	border-left: 1px solid white;
@@ -183,17 +206,19 @@ input:focus,
 	top: 0;
 	left: 384px;
 	display: none;
+	z-index: 10;
 }
 
 /*SOLUTION 2*/
 .price-solution2{
-	height: 525px;
+	height: 653px;
 	width: 255px;
 	background-color: #af5aff;
 	position: absolute;
 	top: 0;
 	left: 638px;
 	display: none;
+	z-index: 10;
 }
 
 
@@ -202,7 +227,7 @@ input:focus,
 	width: 59px;;
 	position: absolute;
 	top: -225px;
-	left: 905px;
+	left: 1161px;
 	display: none;
 }
 

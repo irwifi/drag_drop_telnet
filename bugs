@@ -1,0 +1,28 @@
+Rightsidemenu
+somehow the text is not beeing centeret at start of the apperence of all the iconmenus
+
+Leftsidemenu
+Leftside menu is showing up from the start -> should be hidden
+
+"Andet" works fine in drag and drop, but if you change its place, it would show the pop up again and break by giving the same name to the next icon
+
+You are able to kopi a solution when clicked the first time, even though there is nothing to copy from. That would make the program crash by giving the next tab "undefined"
+
+you have to be on solution 1 to be able to kopi a new solution, else it would crash with "undefined" in tab slide
+
+TV -> Solution 1+2 is missing som icons
+
+tv bedbånd -> Solution 1+2 is missing some ikons
+
+Services-> Solution 1+2 is missing some ikons
+
+
+
+
+
+
+
+DRAG AND DROP
+mobil abonnement -> is to long for the input field to be there.
+
+
