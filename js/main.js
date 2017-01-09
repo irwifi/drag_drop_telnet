@@ -1015,7 +1015,12 @@ var counterClones = 0;
          	}
          	console.log(ui);
          	var draggableId = ui.draggable.attr("id");
-         	if (draggableId === 'other'){
+
+         	// the second condition is added to make sure that the dialog box is display only on first time. once the values are set, the dialog box will not appear on dragging and dropping
+         	if (draggableId === 'other'  && ui.draggable.hasClass("other_set") === false) {
+         		// an reference to circle object is created because $(this) will not work inside the click function of the button
+         		var obj_circle = $(this);
+         		
          		$('#dialog').attr('title', 'Tilføj andet service')
          		.html('<input type="text" placeholder="Navn" class="name_other_dialog"/><input type="number" placeholder="Beløb"  class="number_other_dialog" /><input type="radio" />Pr. MD <input type="radio" />Engangsbeløb')
 	  			.dialog({
@@ -1047,6 +1052,8 @@ var counterClones = 0;
                 			$(".pricebox.active .kroner").html(newPrice);
 
 			            	if (true) {
+							// adds a class to other icon to represent that the values have already been set so not to display dialog box in subsequent dragging.
+							obj_circle.children('#other').addClass('other_set');			            		
 			          			$(this).dialog('close');
 			          		}
 			            }
