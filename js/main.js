@@ -787,18 +787,6 @@ var counterClones = 0;
 							$('.sidebar2').show();
 							$( "#leftnavdown" ).trigger( "click" );
 			            }
-	  				},
-	  				{ 
-	  					text: "tilføj ny løsning",
-			            click: function() {
-			                // Save code here
-			                solution++;
-		          			//Change active bottom tab
-		          			$('.pricebox').removeClass('active');
-						$(this).dialog('close');
-						$('.sidebar1').hide();
-						$('.sidebar2').show();
-					}
 				};
 
 			// Assigned the other button to a variable too
@@ -862,9 +850,8 @@ var counterClones = 0;
 			$('#dialog').attr('title', 'Tilføj Løsning')
 	  			.text("Tilføj løsning")
 	  			//.html('<h1>Kopier løsning 1?</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>')
-	  			.dialog(
-{
-			buttons:  dialogue_buttons_array	, 
+	  			.dialog({
+				buttons:  dialogue_buttons_array, 
 				closeOnEscape: true,
 				draggable: false,
 				resizable: false,
