@@ -743,109 +743,123 @@ var counterClones = 0;
 		
 	    	
 	    if(solution < 3){
+	    		// Assigned the copy button to a variable
+	    		var dialogue_copy_button =
+				{		
+					text: "Kopier pågælende løsning",
+					"class": 'copy_btn',
+					click: function() {
+						solution++;
+						var cloneFrom = $('.pricebox.active').data('box');
+						var clonedPrice = $('.pricebox.active .pricetext .kroner').html();
+
+						$('.pricebox').removeClass('active');
+						// Add the menu in footer
+						var selector = $('.main-footer .row .SettingsBox');
+						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
+							
+						var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">'+clonedPrice+'</span> KR/MD</div>');
+						var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
+						priceText.appendTo(priceBox);
+						arrow.appendTo(priceBox);
+						priceBox.insertBefore(selector);
+
+						//adding big circle
+						var clonedCircleContent = $('.circle[data-circle="'+cloneFrom+'"]').html();
+						$('.circles-container .circle').hide();
+						$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'">'+clonedCircleContent+'</div>');
+						startDraggable(solution);
+
+						//add the slide
+						var clonedSlideContent = $('.solution_box.'+cloneFrom).html();
+						var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'">'+clonedSlideContent+'</div>');
+						// var menuheader = $('<div class="menuheader after_here"></div>');
+						// var h2 = $('<h2>Månedlig ydelse</h2><hr>');
+						// h2.appendTo(menuheader)
+						// menuheader.appendTo(slide)
+						slide.insertAfter('.currentprice');
+
+						$(this).dialog('close');
+						$('.sidebar1').hide();
+						$('.sidebar2').show();
+					}
+				};
+
+			// Assigned the other button to a variable too
+			var dialogue_button_2 =
+				{ 
+					text: "tilføj ny løsning",
+				  	click: function() {
+				      	// Save code here
+				      	solution++;
+						//Change active bottom tab
+						$('.pricebox').removeClass('active');
+
+						// Add the menu in footer
+						var selector = $('.main-footer .row .SettingsBox');
+						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
+						var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">0</span> KR/MD</div>');
+						var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
+						priceText.appendTo(priceBox);
+						arrow.appendTo(priceBox);
+						priceBox.insertBefore(selector);
+
+						//adding big circle
+						$('.circles-container .circle').hide();
+						$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'"><div class="content"><div class="contentInput"> <input id="nameField" type="text" placeholder="Navn"> <img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png" alt=""></div></div> </div>');
+						startDraggable(solution);
+
+
+						//add the slide
+						var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'"></div>');
+						var menuheader = $('<div class="menuheader after_here"></div>');
+						var h2 = $('<h2>Månedlig ydelse</h2><hr>');
+						h2.appendTo(menuheader)
+						menuheader.appendTo(slide)
+						slide.insertAfter('.currentprice');
+
+						//add the circle for slider
+						var circle = $('<div class="circle'+solution+' img-responsive"></div>');
+						var content = $('<div class="content"></div>');
+						var contentInput = $('<div class="contentInput"></div>');
+				          	var buttons = $('<input id="nameField" type="text" placeholder="Navn"><img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png">');
+				          
+				          
+				          	contentInput.appendTo(content);
+				          	content.appendTo(circle);
+				          	// $('.circle').hide();
+				          	circle.insertAfter('.dialog');
+
+						$(this).dialog('close');
+						$('.sidebar1').hide();
+						$('.sidebar2').show();
+				  	}
+				}
+
+			// Created an array of buttons and copy button added only if the active solution is not the first default one.
+			var dialogue_buttons_array = [];
+			if($(".pricebox.active").attr('data-box') !== 'currentprice') {
+				dialogue_buttons_array.push(dialogue_copy_button);
+			}
+			dialogue_buttons_array.push(dialogue_button_2);
+
 			$('#dialog').attr('title', 'Tilføj Løsning')
 	  			.text("Tilføj løsning")
 	  			//.html('<h1>Kopier løsning 1?</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>')
-	  			.dialog({
-	  				buttons: [
-	  				{		
-						text: "Kopier pågælende løsning",
-			            "class": 'copy_btn',
-			            click: function() {
-			                solution++;
-							var cloneFrom = $('.pricebox.active').data('box');
-							var clonedPrice = $('.pricebox.active .pricetext .kroner').html();
-
-							$('.pricebox').removeClass('active');
-							// Add the menu in footer
-		          			var selector = $('.main-footer .row .SettingsBox');
-		          			var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
-							
-		          			var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">'+clonedPrice+'</span> KR/MD</div>');
-		          			var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
-		          			priceText.appendTo(priceBox);
-		          			arrow.appendTo(priceBox);
-		          			priceBox.insertBefore(selector);
-
-							//adding big circle
-							var clonedCircleContent = $('.circle[data-circle="'+cloneFrom+'"]').html();
-		          			$('.circles-container .circle').hide();
-		          			$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'">'+clonedCircleContent+'</div>');
-		          			startDraggable(solution);
-
-							//add the slide
-							var clonedSlideContent = $('.solution_box.'+cloneFrom).html();
-		          			var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'">'+clonedSlideContent+'</div>');
-		          			// var menuheader = $('<div class="menuheader after_here"></div>');
-		          			// var h2 = $('<h2>Månedlig ydelse</h2><hr>');
-		          			// h2.appendTo(menuheader)
-		          			// menuheader.appendTo(slide)
-		          			slide.insertAfter('.currentprice');
-
-		  					$(this).dialog('close');
-		          			$('.sidebar1').hide();
-							$('.sidebar2').show();
-			            }
-	  				},
-	  				{ 
-	  					text: "tilføj ny løsning",
-			            click: function() {
-			                // Save code here
-			                solution++;
-		          			//Change active bottom tab
-		          			$('.pricebox').removeClass('active');
-
-		          			// Add the menu in footer
-		          			var selector = $('.main-footer .row .SettingsBox');
-		          			var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
-		          			var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">0</span> KR/MD</div>');
-		          			var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
-		          			priceText.appendTo(priceBox);
-		          			arrow.appendTo(priceBox);
-		          			priceBox.insertBefore(selector);
-
-		          			//adding big circle
-		          			$('.circles-container .circle').hide();
-		          			$('.circles-container').append('<div class="circle circle'+ solution +' new-circle img-responsive draggable-circle" data-circle="newCircle'+ solution +'"><div class="content"><div class="contentInput"> <input id="nameField" type="text" placeholder="Navn"> <img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png" alt=""></div></div> </div>');
-		          			startDraggable(solution);
-
-
-		          			//add the slide
-		          			var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'"></div>');
-		          			var menuheader = $('<div class="menuheader after_here"></div>');
-		          			var h2 = $('<h2>Månedlig ydelse</h2><hr>');
-		          			h2.appendTo(menuheader)
-		          			menuheader.appendTo(slide)
-		          			slide.insertAfter('.currentprice');
-
-		          			//add the circle for slider
-		          			var circle = $('<div class="circle'+solution+' img-responsive"></div>');
-	          				var content = $('<div class="content"></div>');
-	          				var contentInput = $('<div class="contentInput"></div>');
-	                        var buttons = $('<input id="nameField" type="text" placeholder="Navn"><img id="parrent" src="img/voksen.png" alt=""><img id="child" src="img/barn.png">');
-	                        
-	                        
-	                        contentInput.appendTo(content);
-	                        content.appendTo(circle);
-	                        // $('.circle').hide();
-	                        circle.insertAfter('.dialog');
-
-		          			$(this).dialog('close');
-		          			$('.sidebar1').hide();
-							$('.sidebar2').show();
-			            }
-	  				}
-	  			], closeOnEscape: true,
-	  				draggable: false,
-	  				resizable: false,
-	  				show: 'fade',
-	          		hide: 'fade',
-	  				modal: true,  // you can't click anywhere else before you close the modal box
-	  				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
-			        dialogClass: 'sendMailDialog',
-			        width: 490,
-			        height: 305,
-			        //'z-index': 999999
+	  			.dialog(
+{
+			buttons:  dialogue_buttons_array	, 
+				closeOnEscape: true,
+				draggable: false,
+				resizable: false,
+				show: 'fade',
+				hide: 'fade',
+				modal: true,  // you can't click anywhere else before you close the modal box
+				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
+				dialogClass: 'sendMailDialog',
+				width: 490,
+				height: 305,
+				//'z-index': 999999
 	  		});
 
 		}else{
