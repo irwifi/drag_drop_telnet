@@ -34,42 +34,42 @@ $(document).ready(function(){
 			'name': '4SURE Premium',
 			'icon': 'img/mobilab_15gb.png',
 			'price': 199,
-			'html':'15 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="199">15 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag price:199</div>'
 		},
 		{
 			'slug': 'shop_4fun',
 			'name': '4FUN',
 			'icon': 'img/mobilab_8gb.png',
 			'price': 149,
-			'html':'8 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="149">8 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag</div>'
 		},
 		{
 			'slug': 'shop_ex199',
 			'name': 'Ekstra bruger 199',
 			'icon': 'img/html24.png',
 			'price': 199,
-			'html':'Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="199">Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag</div>'
 		},
 		{
 			'slug': 'shop_ex149',
 			'name': 'Ekstra bruger 149',
 			'icon': 'img/html24.png',
 			'price': 149,
-			'html':'Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="149">Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag</div>'
 		},
 		{
 			'slug': 'shop_ex99',
 			'name': 'Ekstra bruger',
 			'icon': 'img/html24.png',
 			'price': 99,
-			'html':'Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="99">Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag</div>'
 		},
 		{
 			'slug': 'shop_exjunior',
 			'name': 'Junior',
 			'icon': 'img/html24.png',
 			'price': 69,
-			'html':'1 GB, 1 times tale, Fri sms/mms, Tryghedspakke, Telia Tirsdag'
+			'html':'<div class="myservice" data-price="69">1 GB, 1 times tale, Fri sms/mms, Tryghedspakke, Telia Tirsdag</div>'
 		},
 		//mobilbredbånd
 
@@ -85,28 +85,28 @@ $(document).ready(function(){
 			'name': '4LIFE Premium Plus',
 			'icon': 'img/mobil_bred_500gb.png',
 			'price': 399,
-			'html':'500 GB, Roam Like Home Norden og Baltikum'
+			'html':'<div class="myservice" data-price="399">500 GB, Roam Like Home Norden og Baltikum</div>'
 		},
 		{
 			'slug': 'shop_4lifeprem',
 			'name': '4LIFE Premium',
 			'icon': 'img/mobil_bred_100gb.png',
 			'price': 299,
-			'html':'100 GB, Roam Like Home Norden og Baltikum'
+			'html':'<div class="myservice" data-price="299">100 GB, Roam Like Home Norden og Baltikum</div>'
 		},
 		{
 			'slug': 'shop_4lifefull',
 			'name': '4LIFE Full',
 			'icon': 'img/mobil_bred_30gb.png',
 			'price': 199,
-			'html':'30 GB, Roam Like Home Norden og Baltikum'
+			'html':'<div class="myservice" data-price="199">30 GB, Roam Like Home Norden og Baltikum</div>'
 		},
 		{
 			'slug': 'shop_4lifelight',
 			'name': '4LIFE Light',
 			'icon': 'img/mobil_bred_5gb.png',
 			'price': 199,
-			'html':'5 GB, Roam Like Home Norden og Baltikum'
+			'html':'<div class="myservice" data-price="199">5 GB, Roam Like Home Norden og Baltikum</div>'
 		},
 
 		//Bredbånd
@@ -122,28 +122,28 @@ $(document).ready(function(){
 			'name': '50 Mbit Bredbånd',
 			'icon': 'img/bredband_50mbit.png',
 			'price': 329, 
-			'html':'Op til 50 Mbit download (min. 40 Mbit), 10 Mbit upload'
+			'html':'<div class="myservice" data-price="329">Op til 50 Mbit download (min. 40 Mbit), 10 Mbit upload</div>'
 		},
 		{
 			'slug': 'shop_30mbitbredband',
 			'name': '30 Mbit Bredbånd',
 			'icon': 'img/bredband_30mbit.png',
 			'price': 279, 
-			'html':'Op til 30 Mbit download (min. 20 Mbit), 10 Mbit upload'
+			'html':'<div class="myservice" data-price="279">Op til 30 Mbit download (min. 20 Mbit), 10 Mbit upload</div>'
 		},
 		{
 			'slug': 'shop_20mbitbredband',
 			'name': '20 Mbit Bredbånd',
 			'icon': 'img/bredband_20mbit.png',
 			'price': 249, 
-			'html':'Op til 20 Mbit download (min. 15 Mbit), 10 Mbit upload'
+			'html':'<div class="myservice" data-price="249">Op til 20 Mbit download (min. 15 Mbit), 10 Mbit upload</div>'
 		},
 		{
 			'slug': 'shop_Surfwave',
 			'name': 'Surfwave',
 			'icon': 'img/bredband_50mbit.png',
 			'price': 199, 
-			'html':'Op til 50 Mbit download, 10 Mbit upload'
+			'html':'<div class="myservice" data-price="199">Op til 50 Mbit download, 10 Mbit upload</div>'
 		},
 		
 		//TV
@@ -159,21 +159,21 @@ $(document).ready(function(){
 			'name': '4ONE',
 			'icon': 'img/tv_4one.png',
 			'price': 499, 
-			'html':'50 TV kanaler, op til 20 mbit, oprettelse 0 kr'
+			'html':'<div class="myservice" data-price="499">50 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4more',
 			'name': '4MORE',
 			'icon': 'img/tv_4more.png',
 			'price': 399, 
-			'html':'28 TV kanaler, op til 20 mbit, oprettelse 0 kr'
+			'html':'<div class="myservice" data-price="399">28 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4all',
 			'name': '4ALL',
 			'icon': 'img/tv_4all.png',
 			'price': 299, 
-			'html':'17 TV kanaler, op til 20 mbit, oprettelse 0 kr'
+			'html':'<div class="myservice" data-price="299">17 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
 		},
 		
 		//TV bredbånd
@@ -189,84 +189,84 @@ $(document).ready(function(){
 			'name': '4ALL med Bredbånd',
 			'icon': 'img/tvbredband_50.png',
 			'price': 499, 
-			'html':'50 TV kanaler, op til 20 mbit, oprettelse 0 kr'
+			'html':'<div class="myservice" data-price="499">50 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4moremedbredband',
 			'name': '4MORE med Bredbånd',
 			'icon': 'img/tvbredband_28.png',
 			'price': 399, 
-			'html':'28 TV kanaler, op til 20 mbit, oprettelse 0 kr'
+			'html':'<div class="myservice" data-price="399">28 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4onemedbredband',
 			'name': '4ONE med Bredbånd',
 			'icon': 'img/tvbredband_17.png',
 			'price': 299, 
-			'html':'17 TV kanaler, op til 20 mbit, oprettelse 0 kr'
+			'html':'<div class="myservice" data-price="299">17 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_tilvalgkanal9',
 			'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler9.png',
 			'price': 9, 
-			'html':'Tilvalgskanaler'
+			'html':'<div class="myservice" data-price="9">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_tilvalgkanal19',
 			'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler19.png',
 			'price': 19, 
-			'html':'Tilvalgskanaler'
+			'html':'<div class="myservice" data-price="19">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_tvbredband',
 			'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler29.png',
 			'price': 29, 
-			'html':'Tilvalgskanaler'
+			'html':'<div class="myservice" data-price="29">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_tvbredband',
 			'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler39.png',
 			'price': 39, 
-			'html':'Tilvalgskanaler'
+			'html':'<div class="myservice" data-price="39">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_barnpakke',
 			'name': 'Børnepakke',
 			'icon': 'img/tvbredband_barnoghbo.png',
 			'price': 69, 
-			'html':'Alle de bedste kanaler for børn med kvalitetsunderholdning til både store og små. Du får desuden adgang til streaming tjenesten SF Børnenes Favorit'
+			'html':'<div class="myservice" data-price="69">Alle de bedste kanaler for børn med kvalitetsunderholdning til både store og små. Du får desuden adgang til streaming tjenesten SF Børnenes Favorit</div>'
 		},
 		{
 			'slug': 'shop_cmorefilm',
 			'name': 'C More Film',
 			'icon': 'img/tvbredband_cmorefilm.png',
 			'price': 99, 
-			'html':'8 kanaler fra C More med kvalitetsfilm- og serier i alle generer. Et must, hvis du elsker film'
+			'html':'<div class="myservice" data-price="99">8 kanaler fra C More med kvalitetsfilm- og serier i alle generer. Et must, hvis du elsker film</div>'
 		},
 		{
 			'slug': 'shop_discchannel',
 			'name': 'Discovery-pakke',
 			'icon': 'img/tvbredband_discovery.png',
 			'price': 59, 
-			'html':'Denne pakke er til dig, der ikke kan få nok af vilde dyr, videnskab og historier om mennesker'
+			'html':'<div class="myservice" data-price="59">Denne pakke er til dig, der ikke kan få nok af vilde dyr, videnskab og historier om mennesker</div>'
 		},
 		{
 			'slug': 'shop_disney',
 			'name': 'Disney-pakke',
 			'icon': 'img/tvbredband_disney.png',
 			'price': 49, 
-			'html':'Få de ret Disney-kanaler og alt det bedste fra den magiske verden i en blanding af spillefilm, storfilm, klassikere og serier. OBS: Kan ikke kombineres med børnekanalen, der allerede indeholder de 3 kanaler'
+			'html':'<div class="myservice" data-price="49">Få de ret Disney-kanaler og alt det bedste fra den magiske verden i en blanding af spillefilm, storfilm, klassikere og serier. OBS: Kan ikke kombineres med børnekanalen, der allerede indeholder de 3 kanaler</div>'
 		},
 		{
 			'slug': 'shop_hbopakke',
 			'name': 'HBO-pakke',
 			'icon': 'img/tvbredband_barnoghbo.png',
 			'price': 69, 
-			'html':'Med HBO-pakken får du adgang til HBO streaming tjenesten. Se alle de prisbelønnede tv-serier kun få timer efter premieren i USA.'
+			'html':'<div class="myservice" data-price="69">Med HBO-pakken får du adgang til HBO streaming tjenesten. Se alle de prisbelønnede tv-serier kun få timer efter premieren i USA.</div>'
 		},
 
 		//services for current
@@ -304,62 +304,62 @@ $(document).ready(function(){
 			'name':'Spotify Premium',
 			'icon':'img/spotify.png',
 			'price': 79,
-			'html' : 'Verdens fedeste musiktjenest med adgang til millioner af numre'
+			'html' : '<div class="myservice" data-price="79">Verdens fedeste musiktjenest med adgang til millioner af numre</div>'
 		},
 		{
 			'slug': 'shop_hbo',
 			'name':'HBO',
 			'icon':'img/hbo.png',
 			'price': 69,
-			'html' : 'Direkte adgang til veredns bedste serier'
+			'html' : '<div class="myservice" data-price="69">Direkte adgang til veredns bedste serier</div>'
 		},
 		{
 			'slug': 'shop_storytell',
 			'name':'storytell',
 			'icon':'img/storytell.png',
 			'price': 79,
-			'html' : 'Over 10.000 fantastiske lydbøger og e-bøger'
+			'html' : '<div class="myservice" data-price="79">Over 10.000 fantastiske lydbøger og e-bøger</div>'
 		},
 		{
 			'slug': 'shop_zetland',
 			'name':'Zetland',
 			'icon':'img/zetland.png',
 			'price': 99,
-			'html' : 'Zetland er en digital avis, der udkommer hver morgen'
+			'html' : '<div class="myservice" data-price="99">Zetland er en digital avis, der udkommer hver morgen</div>'
 		},
 		{
 			'slug': 'shop_teliaforsikring',
 			'name':'Telia Forsikring',
 			'icon':'img/forsikring.png',
 			'price': 99,
-			'html' : 'Dækker f.eks. Skærmbrug og væskeskade'
+			'html' : '<div class="myservice" data-price="99">Dækker f.eks. Skærmbrug og væskeskade</div>'
 		},
 		{
 			'slug': 'shop_roamlikehomeeurope',
 			'name':'Roam Like Home Europe',
 			'icon':'img/roam.png',
 			'price': 99,
-			'html' : 'Tag dit abonnement med på ferie og tal og surf løs uden at betale ekstra. Gælder 37 europæiske lande'
+			'html' : '<div class="myservice" data-price="99">Tag dit abonnement med på ferie og tal og surf løs uden at betale ekstra. Gælder 37 europæiske lande</div>'
 		},
 		{
 			'slug': 'shop_teliatv',
 			'name':'Telia TV',
 			'icon':'img/film.png',
 			'price': 99,
-			'html' : 'Se TV på din smartphone, tablet og computer'
+			'html' : '<div class="myservice" data-price="99">Se TV på din smartphone, tablet og computer</div>'
 		},
 		{
 			'slug': 'shop_flipp',
 			'name':'Flipp',
 			'icon':'img/flipp.png',
 			'price': 99,
-			'html' : 'Få alle dine favoritmagasiner og -blade i én app'
+			'html' : '<div class="myservice" data-price="99">Få alle dine favoritmagasiner og -blade i én app</div>'
 		},
 		{
 			'slug': 'other',
 			'name':'other',
 			'icon':'img/flipp.png',
-			'price': 99,
+			'price': 0,
 			'html' : '<div class="myservice"><span class="servicename other">Zetland</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		}
 	];	
@@ -383,8 +383,11 @@ $(document).ready(function(){
 	}
 
 	hideAllRightMenus();
+
+
 	// Show current Right menu if service icon is clicked
-	$('.servicesIconTrigger').click(function(){
+	$('.sidebar1 .servicesIconTrigger').click(function(){
+		console.log($('.currentServicemenu-hidden'));
 		// show this menu
 		$( "#rightnavup" ).trigger( "click" );
 		$('.currentServicemenu-hidden').toggle('slide', {direction: 'left'}).hide();
@@ -430,10 +433,10 @@ $(document).ready(function(){
 		// $( "#rightnavup" ).trigger( "click" );
 	});
 
-	$('rightMenuTriggerServices').click(function(){
+	$('#rightMenuTriggerServices').click(function(){
 		hideAllRightMenus();
-		
-		$('.solutionServices-hidden').toggle('slide', {direction: 'left'}).hide()
+		alert(".sidebar2 .solutionServices-hidden");
+		$('.sidebar2 .solutionServices-hidden').toggle('slide', {direction: 'left'}).hide()
 		// $( "#rightnavup" ).trigger( "click" );
 	});
 
@@ -779,6 +782,19 @@ var counterClones = 0;
 						// menuheader.appendTo(slide)
 						slide.insertAfter('.currentprice');
 
+		  					$(this).dialog('close');
+		          			$('.sidebar1').hide();
+							$('.sidebar2').show();
+							$( "#leftnavdown" ).trigger( "click" );
+			            }
+	  				},
+	  				{ 
+	  					text: "tilføj ny løsning",
+			            click: function() {
+			                // Save code here
+			                solution++;
+		          			//Change active bottom tab
+		          			$('.pricebox').removeClass('active');
 						$(this).dialog('close');
 						$('.sidebar1').hide();
 						$('.sidebar2').show();

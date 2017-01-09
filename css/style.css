@@ -88,6 +88,10 @@ input:focus,
 	display: none;
 }
 
+.sidebar1 .rightmenu-hidden{
+	display: none;
+}
+
 .services-leftmenu,
 .services-rightmenu{
 	width: 130px;
@@ -189,7 +193,7 @@ input:focus,
 }
 
 .servicename {
-	font-size: 15px
+	font-size: 15px;
 	width: 100px;
 }
 
