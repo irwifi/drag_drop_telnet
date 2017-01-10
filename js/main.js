@@ -706,14 +706,9 @@ var counterClones = 0;
 	// CURRENT SOLUTION
 	$("#arrow").click(function() {
 	  	$('.currentprice').toggle('slide', {direction: 'down'});
-	  	var src = $('#arrow').attr('src');
-	  	
 
 	  	// if the arrow of the event is pointing up change it to down and opposite
-	  	 var src = ($("#arrow").attr('src') === 'img/uparrow.jpg')
-            ? 'img/downarrow.jpg'
-            : 'img/uparrow.jpg';
-         $("#arrow").attr('src', src);
+	  	manage_arrow($(this),true,true);
 	});
 
 	//$(".serviceprice input").on("change paste keyup", function() {
@@ -752,6 +747,8 @@ var counterClones = 0;
 					text: "Kopier pågælende løsning",
 					"class": 'copy_btn',
 					click: function() {
+				  		// Change the arrow of active tab
+				  		manage_arrow($('.pricebox.active').children('[id*="arrow"]'), false, false);						
 						solution++;
 						var cloneFrom = $('.pricebox.active').data('box');
 						var clonedPrice = $('.pricebox.active .pricetext .kroner').html();
@@ -762,7 +759,7 @@ var counterClones = 0;
 						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
 							
 						var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">'+clonedPrice+'</span> KR/MD</div>');
-						var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
+						var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow2.jpg">');
 						priceText.appendTo(priceBox);
 						arrow.appendTo(priceBox);
 						priceBox.insertBefore(selector);
@@ -787,18 +784,6 @@ var counterClones = 0;
 							$('.sidebar2').show();
 							$( "#leftnavdown" ).trigger( "click" );
 			            }
-	  				},
-	  				{ 
-	  					text: "tilføj ny løsning",
-			            click: function() {
-			                // Save code here
-			                solution++;
-		          			//Change active bottom tab
-		          			$('.pricebox').removeClass('active');
-						$(this).dialog('close');
-						$('.sidebar1').hide();
-						$('.sidebar2').show();
-					}
 				};
 
 			// Assigned the other button to a variable too
@@ -806,6 +791,8 @@ var counterClones = 0;
 				{ 
 					text: "tilføj ny løsning",
 				  	click: function() {
+				  		// Change the arrow of active tab
+				  		manage_arrow($('.pricebox.active').children('[id*="arrow"]'), false, false);
 				      	// Save code here
 				      	solution++;
 						//Change active bottom tab
@@ -815,7 +802,7 @@ var counterClones = 0;
 						var selector = $('.main-footer .row .SettingsBox');
 						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
 						var priceText = $('<div class="pricetext">Løsning ' + solution + ' <span class="kroner">0</span> KR/MD</div>');
-						var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow.jpg">');
+						var arrow = $('<img id="arrow'+ solution +'" data-arrow="'+solution+'" class="arrowOpenSolution" src="img/uparrow2.jpg">');
 						priceText.appendTo(priceBox);
 						arrow.appendTo(priceBox);
 						priceBox.insertBefore(selector);
@@ -862,9 +849,8 @@ var counterClones = 0;
 			$('#dialog').attr('title', 'Tilføj Løsning')
 	  			.text("Tilføj løsning")
 	  			//.html('<h1>Kopier løsning 1?</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>')
-	  			.dialog(
-{
-			buttons:  dialogue_buttons_array	, 
+	  			.dialog({
+				buttons:  dialogue_buttons_array, 
 				closeOnEscape: true,
 				draggable: false,
 				resizable: false,
@@ -893,10 +879,7 @@ var counterClones = 0;
 	  	$('.price-solution' + arrowID).toggle('slide', {direction: 'down'});
 
 	  	// if the arrow of the event is pointing up change it to down and opposite
-	  	var src = ($("#arrow" + arrowID).attr('src') === 'img/uparrow.jpg')
-	        ? 'img/downarrow.jpg'
-	        : 'img/uparrow.jpg';
-	     $("#arrow"+ arrowID).attr('src', src);
+	  	manage_arrow($(this),true,true);
   	});
 
 	//clicking bottom tabs
@@ -905,6 +888,11 @@ var counterClones = 0;
 		var target = $(this).data('box');
 		var solution = $(this).data('num-solution');
  
+ 	  	// Change arrow image for active tab
+ 	  	if($(this).hasClass('active') === false) {
+ 	  		manage_arrow($('.pricebox.active').children('[id*="arrow"]'),false,false);		
+ 	  	}
+
 		$(".pricebox").removeClass('active');
 		$(".solution_box").removeClass('active');
 	  	$(".pricebox[data-box='"+ target+"']").addClass('active');
@@ -913,6 +901,9 @@ var counterClones = 0;
 	  	$(".circle").hide();
 	  	$(".circle[data-circle='"+ target+"']").show();
 	  	startDraggable(solution);
+
+	  	// Change the arrow image of current tab
+	  	manage_arrow($(this).find('[id*="arrow"]'),false, true)
 
 		//Show the proper sidebar
 		if(target == 'currentprice'){
@@ -1125,5 +1116,22 @@ var counterClones = 0;
 
 }); // ready
 
-
-
+// Function for changing the arrow image on various events
+function manage_arrow(arrow_object, toggle, active) {
+	  	var new_arrow;
+	  	var arrow_array = ['uparrow', 'downarrow'];
+	  	if(arrow_object.attr('src') === 'img/uparrow.jpg' || arrow_object.attr('src') === 'img/uparrow2.jpg') {
+	  		new_arrow = 0;
+	  	} else {
+	  		new_arrow = 1;
+	  	}
+	  	if(toggle === true) {
+	  		new_arrow = 1 - new_arrow;
+	  	}
+	  	new_arrow = arrow_array[new_arrow];
+	  	if(active === true)  {
+	  		new_arrow = new_arrow + '2';
+	  	}
+	  	new_arrow = 'img/' + new_arrow + '.jpg';
+	     arrow_object.attr('src', new_arrow);
+}

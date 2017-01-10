@@ -291,3 +291,12 @@ footer{
 	background-color: #9b0ce4;
 	height: 75px;
 }
+
+/*css for active pricebox*/
+.pricebox.active{
+	height: 80px;
+	background-color: #af5aff;
+	margin-top: -5px;
+	z-index: 10;
+	overflow: hidden;
+}
