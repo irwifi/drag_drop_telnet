@@ -777,16 +777,17 @@ var counterClones = 0;
 	  	$('.SettingsBox').toggle('slide', {direction: 'down'});
 	});
 
-	
-
 	var solution = 0;
+
+
+
 	startDraggable(solution);
 
 	//Add Solution
 	$('#addSolution').click(function(){
 		
 	    	
-	    if(solution < 3){
+	    if(solution < 2){
 	    		// Assigned the copy button to a variable
 	    		var dialogue_copy_button =
 				{		
@@ -800,6 +801,8 @@ var counterClones = 0;
 						var clonedPrice = $('.pricebox.active .pricetext .kroner').html();
 
 						$('.pricebox').removeClass('active');
+				 	  	$(".currentprice").removeClass('active');
+						$(".solution_box").removeClass('active');
 						// Add the menu in footer
 						var selector = $('.main-footer .row .SettingsBox');
 						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
@@ -843,6 +846,8 @@ var counterClones = 0;
 				      	solution++;
 						//Change active bottom tab
 						$('.pricebox').removeClass('active');
+				 	  	$(".currentprice").removeClass('active');
+						$(".solution_box").removeClass('active');
 
 						// Add the menu in footer
 						var selector = $('.main-footer .row .SettingsBox');
@@ -939,10 +944,15 @@ var counterClones = 0;
  	  		manage_arrow($('.pricebox.active').children('[id*="arrow"]'),false,false);		
  	  	}
 
+ 	  	$(".currentprice").removeClass('active');
 		$(".pricebox").removeClass('active');
 		$(".solution_box").removeClass('active');
 	  	$(".pricebox[data-box='"+ target+"']").addClass('active');
-	  	$(".solution_box."+ target).addClass('active');
+	  	if(target === 'currentprice') {
+	  		$(".currentprice").addClass('active');
+	  	} else {
+	  		$(".solution_box."+ target).addClass('active');
+	  	}
 
 	  	$(".circle").hide();
 	  	$(".circle[data-circle='"+ target+"']").show();

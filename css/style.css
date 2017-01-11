@@ -186,7 +186,7 @@ input:focus,
 .currentprice{
 	height: 653px;
 	width: 254px;
-	background-color: #af5aff;
+	background-color: #9b0ce4;
 	position: absolute;
 	top: 0;
 	left: 130px;
@@ -326,6 +326,10 @@ footer{
 	margin-top: -5px;
 	z-index: 10;
 	overflow: hidden;
+}
+
+.currentprice.active{
+	background-color: #af5aff;
 }
 
 .solution_box.active{
