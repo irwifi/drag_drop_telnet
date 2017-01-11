@@ -1,24 +1,39 @@
-Rightsidemenu
-somehow the text is not beeing centeret at start of the apperence of all the iconmenus
 
-Leftsidemenu
-Leftside menu is showing up from the start -> should be hidden
+functionality bugs:
 
-"Andet" works fine in drag and drop, but if you change its place, it would show the pop up again and break by giving the same name to the next icon
+- "Andet" has a problem, it clones the one before it, if there is one
 
-You are able to kopi a solution when clicked the first time, even though there is nothing to copy from. That would make the program crash by giving the next tab "undefined"
+- You can add 3 solution, you should only be able to add 2.
 
-you have to be on solution 1 to be able to kopi a new solution, else it would crash with "undefined" in tab slide
+- you should be able to email the data (High priotity)
 
-TV -> Solution 1+2 is missing som icons
+- You should be able to reset the whole application and start over on the reset button
 
-tv bedbånd -> Solution 1+2 is missing some ikons
+- The person icons should get added in a order beside of each other(Very low priority)
 
-Services-> Solution 1+2 is missing some ikons
+- Arrow for the navigation for the top and bottom is not working anymore, maybe do to the same id that is used on all the hided sliders (Very Low priority) 
 
+- You should be able to print the data (Very Low priority)
 
 
-DRAG AND DROP
-mobil abonnement -> is to long for the input field to be there.
 
 
+
+
+Design bugs:
+
+- The current box has the wrong color even when not active
+
+- Text styling for the solution 1 and 2
+
+- All the dialog boxes needs to bee styled
+
+- The settings icon and the add should be smaller (the icons is inside of the folder)
+
+- We need some shadow on the price slide boxes. The one that is active, should pop out
+
+- Arrows for the navigation should be the once from the design (Very low priority)
+
+- Icons from the Solution 1 and 2 should be made in CSS (Very low priority)
+
+- Icons for the circle on the top, which does absolutely nothing (plane house car ect.) (Very low priority) 

@@ -4,17 +4,23 @@
 	box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "Pebble_Rg";
+  src: url('../fonts/Pebble_Rg.ttf');
+}
+
 html {
 	box-sizing: border-box;
 }
 
 body{
-	font-size: 17px;
+	font-size: 14px;
 	line-height: 1.5;
 	color: #222;
-	font-family: "Roboto", sans-serif;
-	max-height: 800px;
-	/*max-width: 1024px;*/
+	font-family:"Pebble_Rg", sans-serif;
+	max-height: 768px;
+	text-transform: uppercase;
+	/*width: 1024px;*/
 	/*width: 100%;*/
 }
 
@@ -30,7 +36,7 @@ input:focus,
 
 
 .circle {
-	border: 2px dashed #bababa ;
+	border: 2px dashed #b8b8b8 ;
 	width: 485px;
 	height: 485px;
 	border-radius: 100%;
@@ -56,6 +62,10 @@ input:focus,
 	padding-left: 10px;
 }
 
+.circle1 #child{
+    margin-left: 5px;
+}
+
 .closeWrapper{
 	position: relative;
 }
@@ -76,9 +86,17 @@ input:focus,
 }
 
 .shadowMe{
-	-webkit-box-shadow: -11px 3px 5px -4px rgba(189,189,189,1);
-	-moz-box-shadow: -11px 3px 5px -4px rgba(189,189,189,1);
-	box-shadow: -11px 3px 5px -4px rgba(189,189,189,1);
+	-webkit-box-shadow: -11px 3px 5px -4px rgba(225,225,225,0.5);
+	-moz-box-shadow: -11px 3px 5px -4px rgba(225,225,225,0.5);
+	box-shadow: -11px 3px 5px -4px rgba(225,225,225,0.5);
+}
+
+.sidebarActive{
+	background-color: #fff;
+}
+
+.col-sm-1{
+	padding: 0;
 }
 
 
@@ -90,6 +108,10 @@ input:focus,
 
 .sidebar1 .rightmenu-hidden{
 	display: none;
+}
+
+.sidebar2 .leftslider{
+	background-color: #eee;
 }
 
 .services-leftmenu,
@@ -111,6 +133,11 @@ input:focus,
 	width: 130px;
 	height: 175px;
 	border-bottom: 1px solid #d8d8d8;
+}
+
+.iconText{
+	padding-top: 5px;
+	font-weight: bold;
 }
 
 .slidernavigation div#leftnavup,
@@ -193,7 +220,7 @@ input:focus,
 }
 
 .servicename {
-	font-size: 15px;
+	font-size: 12px;
 	width: 100px;
 }
 
@@ -208,7 +235,7 @@ input:focus,
 	width: 254px;
 	border-right: 1px solid white;
 	border-left: 1px solid white;
-	background-color: #af5aff;
+	background-color: #9b0ce4;
 	position: absolute;
 	top: 0;
 	left: 384px;
@@ -220,7 +247,7 @@ input:focus,
 .price-solution2{
 	height: 653px;
 	width: 255px;
-	background-color: #af5aff;
+	background-color: #9b0ce4;
 	position: absolute;
 	top: 0;
 	left: 638px;
@@ -248,14 +275,14 @@ input:focus,
 	/*background-color: gray;*/
 	display: inline-block;
 	vertical-align: top;
-	line-height: 70px;
+	line-height: 75px;
 }
 
 .pricebox .pricetext{
 	float: left;
 	padding-left: 10px;
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .pricebox .kroner {
@@ -300,3 +327,17 @@ footer{
 	z-index: 10;
 	overflow: hidden;
 }
+
+.solution_box.active{
+	background-color: #af5aff;
+}
+
+.slick-test{
+	text-align: center;
+	width: 130px;
+}
+
+/*.hest{
+	text-align: center;
+	width: 100px;
+}*/

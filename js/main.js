@@ -396,62 +396,111 @@ $(document).ready(function(){
 		//$('#forside, #events, #nordic, #results, #other, #contact').hide();
 	});
 
+	// Show current Right menu if service icon is clicked
+	$('.sidebar1 .servicesIconTrigger').click(function(){
+		console.log($('.currentServicemenu-hidden'));
+		// show this menu
+		$( "#rightnavup" ).trigger( "click" );
+		// hide these menus
+		//$('#forside, #events, #nordic, #results, #other, #contact').hide();
+	});
+
 
 	//Show left menus on click
 	$('#rightMenuTriggerMobilabonement').click(function(){
-		hideAllRightMenus();
-		
-		$('.solutionMobilabonement-hidden').toggle('slide', {direction: 'left'}).hide()
+
+		// var menu = ;
+        menuHideShow($('.solutionMobilabonement-hidden'));
+        changeColor($(this));
+
+        // var isVisible = menu.is(":visible");
+		// hideAllRightMenus();
+		// if(!isVisible){$(menu).show();}
+        // $('.solutionMobilabonement-hidden').toggle('slide', {direction: 'left'}).hide();
+        // $('.solutionMobilabonement-hidden').toggle('slide', {direction: 'left'}).parent().toggleClass('sidebarNotActive').hide();
+		// console.log($(this).parent());
 		// $( "#rightnavup" ).trigger( "click" );
 	});
 
 	$('#rightMenuTriggerMobilbredband').click(function(){
-		hideAllRightMenus();
-		
-		$('.solutionMobilbredband-hidden').toggle('slide', {direction: 'left'}).hide()
+        changeColor($(this));
+        menuHideShow($('.solutionMobilbredband-hidden'));
+		// $('.solutionMobilbredband-hidden').toggle('slide', {direction: 'left'}).hide()
 		// $( "#rightnavup" ).trigger( "click" );
-	});
+        // $(this).parent().toggleClass('sidebarNotActive sidebarActive');
+    });
 
 	$('#rightMenuTriggerBredband').click(function(){
-		hideAllRightMenus();
+        changeColor($(this));
+        menuHideShow($('.solutionBredband-hidden'));
+		// hideAllRightMenus();
 		
-		$('.solutionBredband-hidden').toggle('slide', {direction: 'left'}).hide()
+		// $('.solutionBredband-hidden').toggle('slide', {direction: 'left'}).hide();
 		// $( "#rightnavup" ).trigger( "click" );
-	});
+
+    });
 
 	$('#rightMenuTriggerTv').click(function(){
-		hideAllRightMenus();
+        changeColor($(this));
+        menuHideShow($('.solutionTv-hidden'));
+		// hideAllRightMenus();
 		
-		$('.solutionTv-hidden').toggle('slide', {direction: 'left'}).hide()
+		// $('.solutionTv-hidden').toggle('slide', {direction: 'left'}).hide();
 		// $( "#rightnavup" ).trigger( "click" );
-	});
+    });
 
 	$('#rightMenuTriggerTvbredband').click(function(){
-		hideAllRightMenus();
-		
-		$('.solutionTvbredband-hidden').toggle('slide', {direction: 'left'}).hide()
+
+        changeColor($(this));
+		menuHideShow($('.solutionTvbredband-hidden'));
+		// hideAllRightMenus();
+		// $('.solutionBredband-hidden').toggleClass();
+		// $('.solutionTvbredband-hidden').toggle('slide', {direction: 'left'}).hide();
 		// $( "#rightnavup" ).trigger( "click" );
-	});
+        // changeColor($(this));
+    });
 
 	$('#rightMenuTriggerServices').click(function(){
-		hideAllRightMenus();
-		alert(".sidebar2 .solutionServices-hidden");
-		$('.sidebar2 .solutionServices-hidden').toggle('slide', {direction: 'left'}).hide()
+        changeColor($(this));
+
+        menuHideShow($('.sidebar2 .solutionServices-hidden'));
+		// hideAllRightMenus();
+		// $('.sidebar2 .solutionServices-hidden').toggle('slide', {direction: 'left'}).hide();
 		// $( "#rightnavup" ).trigger( "click" );
-	});
+    });
 
 
+    function changeColor(element) {
 
+        var x = document.getElementsByClassName("nonedrag-serviceIcon");
+        for(var i=0; i<x.length;i++)
+		{
+			$(x.item(i)).css({"background-color": "#eee", "width": "130px"});
+		}
+        $(element).parent().css({"background-color": "#fff"});
+        console.log(element);
+		console.log("change color")
+    }
 
+    function  menuHideShow(menu) {
+        var visble= "";
+        visible = $(menu).is(":visible");
+        console.log(visible);
+        hideAllRightMenus();
+        if(!visible){$(menu).show();}
+    }
 
-
+    $(function() {
+    	$('*[draggable!=true]','.slick-track').unbind('dragstart');
+    	// $( ".serviceIcon img" ).draggable();
+	  });
 	// Left slick slider menu 
 	$(".leftslider").slick({
         // dots: true,
         infinite: false,
         // centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
         arrows: true,
@@ -466,7 +515,7 @@ $(document).ready(function(){
         // dots: true,
         infinite: false,
         // centerMode: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 2,
         vertical: true,
         verticalSwiping: true,
@@ -486,10 +535,7 @@ $(document).ready(function(){
 	// Without this, you can't drag the icons from the menu
 	// For that to work you need to unbind the dragstart event registered by slick slider
 	// like followed, before binding the draggble to element
-	$(function() {
-    	$('*[draggable!=true]','.slick-track').unbind('dragstart');
-    	$( ".serviceIcon img" ).draggable();
-	  });
+	
 
 	// $(".serviceIcon img").on("draggable mouseenter mousedown",function(event){
 	//     event.stopPropagation();
@@ -1110,7 +1156,7 @@ var counterClones = 0;
 		// 	$('#drop').text('Something was dropped inside of me!');
 		// }
 
-	});
+		});
 	}
 
 

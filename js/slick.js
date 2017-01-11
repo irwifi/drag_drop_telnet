@@ -506,7 +506,7 @@
         _.$slides =
             _.$slider
                 .children( _.options.slide + ':not(.slick-cloned)')
-                .addClass('slick-slide');
+                .addClass('slick-test');
 
         _.slideCount = _.$slides.length;
 
