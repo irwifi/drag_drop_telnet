@@ -779,7 +779,30 @@ var counterClones = 0;
 
 	var solution = 0;
 
+	// Reset button click
+	$("#resetBtn").click(function() {
+		$('.pricebox').addClass('active');
+ 	  	$(".currentprice").addClass('active');
+ 	  	$('.currentprice').hide();
 
+ 	  	// Removing the solutions and circle
+ 	  	for(var i=solution;i>0;i--) {
+ 	  		$('.price-solution'+i+'.newCircle'+i).remove();
+ 	  		$('.circle.circle'+i).remove();
+ 	  	}
+ 	  	$('.pricebox').not('[data-box=currentprice]').remove();
+ 	  	$('.circle.circle0 > img').remove();
+ 	  	$('.circle.circle0').show();
+ 	  	manage_arrow($('.pricebox').children('[id*="arrow"]'),false,true,true);
+ 	  	$('.currentprice .myservice').remove();
+ 	  	$('#currentPriceValue').text('0');
+ 	  	$('.sidebar2').hide();
+ 	  	$('.sidebar1').show();
+
+ 	  	// Resetting the solution to 0
+		solution = 0;
+	  	$('.SettingsBox').toggle('slide', {direction: 'down'});
+	});
 
 	startDraggable(solution);
 
@@ -1176,17 +1199,24 @@ var counterClones = 0;
 }); // ready
 
 // Function for changing the arrow image on various events
-function manage_arrow(arrow_object, toggle, active) {
+function manage_arrow(arrow_object, toggle, active, reset) {
 	  	var new_arrow;
 	  	var arrow_array = ['uparrow', 'downarrow'];
-	  	if(arrow_object.attr('src') === 'img/uparrow.jpg' || arrow_object.attr('src') === 'img/uparrow2.jpg') {
+
+	  	if(reset === true) {
 	  		new_arrow = 0;
 	  	} else {
-	  		new_arrow = 1;
+		  	if(arrow_object.attr('src') === 'img/uparrow.jpg' || arrow_object.attr('src') === 'img/uparrow2.jpg') {
+		  		new_arrow = 0;
+		  	} else {
+		  		new_arrow = 1;
+		  	}
+
+		  	if(toggle === true) {
+		  		new_arrow = 1 - new_arrow;
+		  	}
 	  	}
-	  	if(toggle === true) {
-	  		new_arrow = 1 - new_arrow;
-	  	}
+
 	  	new_arrow = arrow_array[new_arrow];
 	  	if(active === true)  {
 	  		new_arrow = new_arrow + '2';
