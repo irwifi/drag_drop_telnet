@@ -1060,10 +1060,14 @@ var counterClones = 0;
 			console.log(newL);
 
 			var targetBox = $('.pricebox.active').data('box');
+			var draggableId = ui.draggable.attr("id");
+			
 			// Adding newservice if it has been dragged
 			if(dragged == true){
 				$('.'+targetBox+' .after_here').after(newService);
-                $("."+targetBox+" .myservice:first").attr('data-clone-service','clone'+counterClones);
+				if (draggableId !== 'other') {
+					$("."+targetBox+" .myservice:first").attr('data-clone-service','clone'+counterClones);
+				}
 				dragged = false;
 			}
 			 //dont copy when dragged in the box -> give it a class called dropped
@@ -1081,7 +1085,6 @@ var counterClones = 0;
 	             )
          	}
          	console.log(ui);
-         	var draggableId = ui.draggable.attr("id");
 
          	// the second condition is added to make sure that the dialog box is display only on first time. once the values are set, the dialog box will not appear on dragging and dropping
          	if (draggableId === 'other'  && ui.draggable.hasClass("other_set") === false) {
