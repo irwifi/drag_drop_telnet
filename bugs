@@ -1,9 +1,9 @@
 
 functionality bugs:
 
-- "Andet" has a problem, it clones the one before it, if there is one
+- "Andet" has a problem, it clones the one before it, if there is one (Done)
 
-- You can add 3 solution, you should only be able to add 2.
+- You can add 3 solution, you should only be able to add 2. (Done)
 
 - you should be able to email the data (High priotity)
 

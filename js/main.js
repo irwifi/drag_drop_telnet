@@ -2,283 +2,319 @@ $(document).ready(function(){
 	// get the screensize
 	// alert("Width: " +screen.width);
 	// alert("Height: " +screen.height);
-	
-	;
 	//CURRENT PRICE DATA
 
 	var currentMenu = [
 		//mobilabonement
 		{
 			'slug': 'mobilabonement',
+			'type':'',
 			'name': 'Mobil abonnement',
 			'icon': 'img/mobil_ab.png',
 			'price': 0,
-			'html':'<div class="myservice"><span class="servicename mobilabonement">Mobil abonnement</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>',
+			'html':'<div class="myservice"><span class="servicename mobilabonement">Mobil abonnement</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div></div>',
 		},
 		{
 			'slug': 'shop_4everything',
-			'name': '4EVERYTHING premium',
+            'type':'mobilabonement',
+            'name': '4EVERYTHING premium',
 			'icon': 'img/mobilab_100gb.png',
 			'price': 399,
-			'html':'<div class="myservice" data-price="399">100 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag price:399</div>'
+			'html':'<div class="myservice" data-price="399"><p class="serviceHeader">4EVERYTHING premium<span>399 Kr.</span> </p><span class="bullets">• 100 GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Upgrade<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_4everythinglight',
-			'name': '4EVERYTHING Light',
+            'type':'mobilabonement',
+            'name': '4EVERYTHING Light',
 			'icon': 'img/mobilab_50gb.png',
 			'price': 299,
-			'html':'<div class="myservice" data-price="299">50 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag price:299</div>'
+			'html':'<div class="myservice" data-price="299"><p class="serviceHeader">4EVERYTHING Light<span>299 Kr.</span> </p><span class="bullets">• 50 GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Upgrade<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_4sure',
-			'name': '4SURE Premium',
+            'type':'mobilabonement',
+            'name': '4SURE Premium',
 			'icon': 'img/mobilab_15gb.png',
 			'price': 199,
-			'html':'<div class="myservice" data-price="199">15 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag price:199</div>'
+			'html':'<div class="myservice" data-price="199"><p class="serviceHeader">4SURE Premium<span>199 Kr.</span> </p><span class="bullets">• 15 GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_4fun',
-			'name': '4FUN',
+            'type':'mobilabonement',
+            'name': '4FUN',
 			'icon': 'img/mobilab_8gb.png',
 			'price': 149,
-			'html':'<div class="myservice" data-price="149">8 GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag</div>'
+			'html':'<div class="myservice" data-price="149"><p class="serviceHeader">4FUN<span>149 Kr.</span> </p><span class="bullets">• 8 GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_ex199',
-			'name': 'Ekstra bruger 199',
+            'type':'mobilabonement',
+            'name': 'Ekstra bruger 199',
 			'icon': 'img/html24.png',
 			'price': 199,
-			'html':'<div class="myservice" data-price="199">Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Upgrade, Telia Tirsdag</div>'
+			'html':'<div class="myservice" data-price="199"><p class="serviceHeader">Ekstra bruger 199<span>199 Kr.</span> </p><span class="bullets">• Deler GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Upgrade<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_ex149',
-			'name': 'Ekstra bruger 149',
+            'type':'mobilabonement',
+            'name': 'Ekstra bruger 149',
 			'icon': 'img/html24.png',
 			'price': 149,
-			'html':'<div class="myservice" data-price="149">Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag</div>'
+			'html':'<div class="myservice" data-price="149"><p class="serviceHeader">Ekstra bruger 149<span>149 Kr.</span> </p><span class="bullets">• Deler GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_ex99',
-			'name': 'Ekstra bruger',
+            'type':'mobilabonement',
+            'name': 'Ekstra bruger',
 			'icon': 'img/html24.png',
 			'price': 99,
-			'html':'<div class="myservice" data-price="99">Deler GB, Fri tale og sms/mms, Roam Like Home Norden og Baltikum, Telia Tirsdag</div>'
+			'html':'<div class="myservice" data-price="99"><p class="serviceHeader">Ekstra bruger<span>99 Kr.</span> </p><span class="bullets">• Deler GB<br>• Fri tale og sms/mms<br>• Roam Like Home Norden og Baltikum<br>• Telia Tirsdag</div></div>'
 		},
 		{
 			'slug': 'shop_exjunior',
-			'name': 'Junior',
+            'type':'mobilabonement',
+            'name': 'Junior',
 			'icon': 'img/html24.png',
 			'price': 69,
-			'html':'<div class="myservice" data-price="69">1 GB, 1 times tale, Fri sms/mms, Tryghedspakke, Telia Tirsdag</div>'
+			'html':'<div class="myservice" data-price="69"><p class="serviceHeader">Junior<span>69 Kr.</span> </p><span class="bullets">• 1 GB<br>• 1 times tale<br>• Fri sms/mms<br>• Tryghedspakke<br>• Telia Tirsdag</div></div>'
 		},
 		//mobilbredbånd
 
 		{
 			'slug': 'mobilbred',
-			'name': 'Mobil bredbånd',
+            'type':'',
+            'name': 'Mobil bredbånd',
 			'icon': 'img/mobil_bred.png',
-			'price': 0, 
+			'price': 0,
 			'html':'<div class="myservice"><span class="servicename mobilbred">Mobil bredbånd</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		},
 		{
 			'slug': 'shop_4lifepremplus',
-			'name': '4LIFE Premium Plus',
+            'type':'mobilbred',
+            'name': '4LIFE Premium Plus',
 			'icon': 'img/mobil_bred_500gb.png',
 			'price': 399,
-			'html':'<div class="myservice" data-price="399">500 GB, Roam Like Home Norden og Baltikum</div>'
+			'html':'<div class="myservice" data-price="399"><p class="serviceHeader">4LIFE Premium Plus<span>339 Kr.</span> </p>• 500 GB<br>• Roam Like Home Norden og Baltikum</div>'
 		},
 		{
 			'slug': 'shop_4lifeprem',
-			'name': '4LIFE Premium',
+            'type':'mobilbred',
+            'name': '4LIFE Premium',
 			'icon': 'img/mobil_bred_100gb.png',
 			'price': 299,
-			'html':'<div class="myservice" data-price="299">100 GB, Roam Like Home Norden og Baltikum</div>'
+			'html':'<div class="myservice" data-price="299"><p class="serviceHeader">4LIFE Premium<span>299 Kr.</span> </p>• 100 GB<br>• Roam Like Home Norden og Baltikum</div>'
 		},
 		{
 			'slug': 'shop_4lifefull',
-			'name': '4LIFE Full',
+            'type':'mobilbred',
+            'name': '4LIFE Full',
 			'icon': 'img/mobil_bred_30gb.png',
 			'price': 199,
-			'html':'<div class="myservice" data-price="199">30 GB, Roam Like Home Norden og Baltikum</div>'
+			'html':'<div class="myservice" data-price="199"><p class="serviceHeader">4LIFE Full<span>199 Kr.</span> </p>• 30 GB<br>• Roam Like Home Norden og Baltikum</div>'
 		},
 		{
 			'slug': 'shop_4lifelight',
-			'name': '4LIFE Light',
+            'type':'mobilbred',
+            'name': '4LIFE Light',
 			'icon': 'img/mobil_bred_5gb.png',
 			'price': 199,
-			'html':'<div class="myservice" data-price="199">5 GB, Roam Like Home Norden og Baltikum</div>'
+			'html':'<div class="myservice" data-price="199"><p class="serviceHeader">4LIFE Light<span>199 Kr.</span> </p>• 5 GB<br>• Roam Like Home Norden og Baltikum</div>'
 		},
 
 		//Bredbånd
 		{
 			'slug': 'bredband',
-			'name': 'Bredbånd',
+            'type':'',
+            'name': 'Bredbånd',
 			'icon': 'img/html24.png',
-			'price': 0, 
+			'price': 0,
 			'html':'<div class="myservice"><span class="servicename bredband">Bredbånd</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		},
 		{
 			'slug': 'shop_50mbitbredband',
-			'name': '50 Mbit Bredbånd',
+            'type':'bredband',
+            'name': '50 Mbit Bredbånd',
 			'icon': 'img/bredband_50mbit.png',
-			'price': 329, 
-			'html':'<div class="myservice" data-price="329">Op til 50 Mbit download (min. 40 Mbit), 10 Mbit upload</div>'
+			'price': 329,
+			'html':'<div class="myservice" data-price="329"><p class="serviceHeader">50 Mbit Bredbånd<span>3299 Kr.</span> </p>• Op til 50 Mbit download (min. 40 Mbit)<br>• 10 Mbit upload</div>'
 		},
 		{
 			'slug': 'shop_30mbitbredband',
-			'name': '30 Mbit Bredbånd',
+            'type':'bredband',
+            'name': '30 Mbit Bredbånd',
 			'icon': 'img/bredband_30mbit.png',
-			'price': 279, 
-			'html':'<div class="myservice" data-price="279">Op til 30 Mbit download (min. 20 Mbit), 10 Mbit upload</div>'
+			'price': 279,
+			'html':'<div class="myservice" data-price="279"><p class="serviceHeader">30 Mbit Bredbånd<span>279 Kr.</span> </p>• Op til 30 Mbit download (min. 20 Mbit)<br>• 10 Mbit upload</div>'
 		},
 		{
 			'slug': 'shop_20mbitbredband',
-			'name': '20 Mbit Bredbånd',
+            'type':'bredband',
+            'name': '20 Mbit Bredbånd',
 			'icon': 'img/bredband_20mbit.png',
-			'price': 249, 
-			'html':'<div class="myservice" data-price="249">Op til 20 Mbit download (min. 15 Mbit), 10 Mbit upload</div>'
+			'price': 249,
+			'html':'<div class="myservice" data-price="249"><p class="serviceHeader">20 Mbit Bredbånd<span>249 Kr.</span> </p>• Op til 20 Mbit download (min. 15 Mbit)<br>• 10 Mbit upload</div>'
 		},
 		{
 			'slug': 'shop_Surfwave',
-			'name': 'Surfwave',
+            'type':'bredband',
+            'name': 'Surfwave',
 			'icon': 'img/bredband_50mbit.png',
-			'price': 199, 
-			'html':'<div class="myservice" data-price="199">Op til 50 Mbit download, 10 Mbit upload</div>'
+			'price': 199,
+			'html':'<div class="myservice" data-price="199"><p class="serviceHeader">Surfwave<span>199 Kr.</span> </p>• Op til 50 Mbit download<br>• 10 Mbit upload</div>'
 		},
-		
+
 		//TV
 		{
 			'slug': 'tv',
-			'name': 'TV',
+            'type':'',
+            'name': 'TV',
 			'icon': 'img/tv.png',
-			'price': 0, 
+			'price': 0,
 			'html':'<div class="myservice"><span class="servicename tv">TV</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		},
 		{
 			'slug': 'shop_4one',
+            'type':'tv',
 			'name': '4ONE',
 			'icon': 'img/tv_4one.png',
-			'price': 499, 
-			'html':'<div class="myservice" data-price="499">50 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
+			'price': 499,
+			'html':'<div class="myservice" data-price="499"><p class="serviceHeader">4ONE<span>499 Kr.</span> </p>• 50 TV kanaler<br>• Op til 20 mbit<br>• Oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4more',
+            'type':'tv',
 			'name': '4MORE',
 			'icon': 'img/tv_4more.png',
-			'price': 399, 
-			'html':'<div class="myservice" data-price="399">28 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
+			'price': 399,
+			'html':'<div class="myservice" data-price="399"><p class="serviceHeader">4MORE<span>399 Kr.</span> </p>• 28 TV kanaler<br>• Op til 20 mbit<br>• Oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4all',
+            'type':'tv',
 			'name': '4ALL',
 			'icon': 'img/tv_4all.png',
-			'price': 299, 
-			'html':'<div class="myservice" data-price="299">17 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
+			'price': 299,
+			'html':'<div class="myservice" data-price="299"><p class="serviceHeader">4ALL<span>299 Kr.</span> </p>• 17 TV kanaler<br>• Op til 20 mbit<br>• Oprettelse 0 kr</div>'
 		},
-		
+
 		//TV bredbånd
 		{
 			'slug': 'tvbredband',
+            'type':'',
 			'name': 'TV bredbånd',
 			'icon': 'img/tvbredband.png',
-			'price': 0, 
+			'price': 0,
 			'html':'<div class="myservice"><span class="servicename tvbredband">TV bredbånd</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		},
 		{
 			'slug': 'shop_4allmedbredband',
-			'name': '4ALL med Bredbånd',
+            'type':'tvbredband',
+            'name': '4ALL med Bredbånd',
 			'icon': 'img/tvbredband_50.png',
-			'price': 499, 
-			'html':'<div class="myservice" data-price="499">50 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
+			'price': 499,
+			'html':'<div class="myservice" data-price="499"><p class="serviceHeader">4ALL med Bredbånd<span>499 Kr.</span> </p>• 50 TV kanaler<br>• Op til 20 mbit<br>• Oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4moremedbredband',
-			'name': '4MORE med Bredbånd',
+            'type':'tvbredband',
+            'name': '4MORE med Bredbånd',
 			'icon': 'img/tvbredband_28.png',
-			'price': 399, 
-			'html':'<div class="myservice" data-price="399">28 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
+			'price': 399,
+			'html':'<div class="myservice" data-price="399"><p class="serviceHeader">4MORE med Bredbånd<span>399 Kr.</span> </p>• 28 TV kanaler<br>• Op til 20 mbit<br>• Oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_4onemedbredband',
-			'name': '4ONE med Bredbånd',
+            'type':'tvbredband',
+            'name': '4ONE med Bredbånd',
 			'icon': 'img/tvbredband_17.png',
-			'price': 299, 
-			'html':'<div class="myservice" data-price="299">17 TV kanaler, op til 20 mbit, oprettelse 0 kr</div>'
+			'price': 299,
+			'html':'<div class="myservice" data-price="299"><p class="serviceHeader">4ONE med Bredbånd<span>299 Kr.</span> </p>• 17 TV kanaler<br>• Op til 20 mbit<br>• Oprettelse 0 kr</div>'
 		},
 		{
 			'slug': 'shop_tilvalgkanal9',
-			'name': 'Tilvalgskanaler',
+            'type':'tvbredband',
+            'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler9.png',
-			'price': 9, 
+			'price': 9,
 			'html':'<div class="myservice" data-price="9">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_tilvalgkanal19',
-			'name': 'Tilvalgskanaler',
+            'type':'tvbredband',
+            'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler19.png',
-			'price': 19, 
+			'price': 19,
 			'html':'<div class="myservice" data-price="19">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_tvbredband',
-			'name': 'Tilvalgskanaler',
+            'type':'tvbredband',
+            'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler29.png',
-			'price': 29, 
+			'price': 29,
 			'html':'<div class="myservice" data-price="29">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_tvbredband',
-			'name': 'Tilvalgskanaler',
+            'type':'tvbredband',
+            'name': 'Tilvalgskanaler',
 			'icon': 'img/tilvalgskanaler39.png',
-			'price': 39, 
+			'price': 39,
 			'html':'<div class="myservice" data-price="39">Tilvalgskanaler</div>'
 		},
 		{
 			'slug': 'shop_barnpakke',
-			'name': 'Børnepakke',
+            'type':'tvbredband',
+            'name': 'Børnepakke',
 			'icon': 'img/tvbredband_barnoghbo.png',
-			'price': 69, 
+			'price': 69,
 			'html':'<div class="myservice" data-price="69">Alle de bedste kanaler for børn med kvalitetsunderholdning til både store og små. Du får desuden adgang til streaming tjenesten SF Børnenes Favorit</div>'
 		},
 		{
 			'slug': 'shop_cmorefilm',
-			'name': 'C More Film',
+            'type':'tvbredband',
+            'name': 'C More Film',
 			'icon': 'img/tvbredband_cmorefilm.png',
-			'price': 99, 
+			'price': 99,
 			'html':'<div class="myservice" data-price="99">8 kanaler fra C More med kvalitetsfilm- og serier i alle generer. Et must, hvis du elsker film</div>'
 		},
 		{
 			'slug': 'shop_discchannel',
-			'name': 'Discovery-pakke',
+            'type':'tvbredband',
+            'name': 'Discovery-pakke',
 			'icon': 'img/tvbredband_discovery.png',
-			'price': 59, 
+			'price': 59,
 			'html':'<div class="myservice" data-price="59">Denne pakke er til dig, der ikke kan få nok af vilde dyr, videnskab og historier om mennesker</div>'
 		},
 		{
 			'slug': 'shop_disney',
-			'name': 'Disney-pakke',
+            'type':'tvbredband',
+            'name': 'Disney-pakke',
 			'icon': 'img/tvbredband_disney.png',
-			'price': 49, 
+			'price': 49,
 			'html':'<div class="myservice" data-price="49">Få de ret Disney-kanaler og alt det bedste fra den magiske verden i en blanding af spillefilm, storfilm, klassikere og serier. OBS: Kan ikke kombineres med børnekanalen, der allerede indeholder de 3 kanaler</div>'
 		},
 		{
 			'slug': 'shop_hbopakke',
-			'name': 'HBO-pakke',
+            'type':'tvbredband',
+            'name': 'HBO-pakke',
 			'icon': 'img/tvbredband_barnoghbo.png',
-			'price': 69, 
+			'price': 69,
 			'html':'<div class="myservice" data-price="69">Med HBO-pakken får du adgang til HBO streaming tjenesten. Se alle de prisbelønnede tv-serier kun få timer efter premieren i USA.</div>'
 		},
 
 		//services for current
 		{
 			'slug': 'services_spotify',
-			'name':'Spotify',
+            'type':'',
+            'name':'Spotify',
 			'icon':'img/spotify.png',
 			'price': 0,
 			'html' : '<div class="myservice"><span class="servicename spotify">Spotify</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		},
 		{
 			'slug': 'services_hbo',
+            'type':'',
 			'name':'HBO',
 			'icon':'img/hbo.png',
 			'price': 0,
@@ -286,6 +322,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'services_storytell',
+            'type':'',
 			'name':'storytell',
 			'icon':'img/storytell.png',
 			'price': 0,
@@ -293,6 +330,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'services_zetland',
+            'type':'',
 			'name':'Zetland',
 			'icon':'img/zetland.png',
 			'price': 0,
@@ -301,6 +339,7 @@ $(document).ready(function(){
 		// solution services
 		{
 			'slug': 'shop_spotify',
+            'type':'services',
 			'name':'Spotify Premium',
 			'icon':'img/spotify.png',
 			'price': 79,
@@ -308,6 +347,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_hbo',
+            'type':'services',
 			'name':'HBO',
 			'icon':'img/hbo.png',
 			'price': 69,
@@ -315,6 +355,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_storytell',
+            'type':'services',
 			'name':'storytell',
 			'icon':'img/storytell.png',
 			'price': 79,
@@ -322,6 +363,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_zetland',
+            'type':'services',
 			'name':'Zetland',
 			'icon':'img/zetland.png',
 			'price': 99,
@@ -329,6 +371,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_teliaforsikring',
+            'type':'services',
 			'name':'Telia Forsikring',
 			'icon':'img/forsikring.png',
 			'price': 99,
@@ -336,6 +379,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_roamlikehomeeurope',
+            'type':'services',
 			'name':'Roam Like Home Europe',
 			'icon':'img/roam.png',
 			'price': 99,
@@ -343,6 +387,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_teliatv',
+            'type':'services',
 			'name':'Telia TV',
 			'icon':'img/film.png',
 			'price': 99,
@@ -350,6 +395,7 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'shop_flipp',
+            'type':'services',
 			'name':'Flipp',
 			'icon':'img/flipp.png',
 			'price': 99,
@@ -357,12 +403,13 @@ $(document).ready(function(){
 		},
 		{
 			'slug': 'other',
+            'type':'',
 			'name':'other',
-			'icon':'img/flipp.png',
+			'icon':'img/andet.png',
 			'price': 0,
-			'html' : '<div class="myservice"><span class="servicename other">Zetland</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
+			'html' : '<div class="myservice"><span class="servicename other">Andet</span><div class="serviceprice"><input type="text" placeholder="0"> kr.</div></div>'
 		}
-	];	
+	];
 	
 
 
@@ -490,20 +537,17 @@ $(document).ready(function(){
         if(!visible){$(menu).show();}
     }
 
-    $(function() {
-    	$('*[draggable!=true]','.slick-track').unbind('dragstart');
-    	// $( ".serviceIcon img" ).draggable();
-	  });
+
 	// Left slick slider menu 
 	$(".leftslider").slick({
         // dots: true,
         infinite: false,
         // centerMode: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         vertical: true,
         verticalSwiping: true,
-        arrows: true,
+        arrows: false,
         swipe: true,
         dragging: true,
         prevArrow: $('#leftnavup'),
@@ -516,10 +560,10 @@ $(document).ready(function(){
         infinite: false,
         // centerMode: true,
         slidesToShow: 4,
-        slidesToScroll: 2,
+        slidesToScroll: 3,
         vertical: true,
         verticalSwiping: true,
-        arrows: true,
+        arrows: false,
         swipe: true,
         dragging: true,
         prevArrow: $('#rightnavup'),
@@ -527,14 +571,15 @@ $(document).ready(function(){
       });
 
 
-	
-
-	
-
 	// http://stackoverflow.com/questions/29522309/jquery-ui-draggable-inside-slick-slider
 	// Without this, you can't drag the icons from the menu
 	// For that to work you need to unbind the dragstart event registered by slick slider
 	// like followed, before binding the draggble to element
+
+    $(function() {
+    	$('*[draggable!=true]','.slick-track').unbind('dragstart');
+    	$( ".serviceIcon img" ).draggable();
+	  });
 	
 
 	// $(".serviceIcon img").on("draggable mouseenter mousedown",function(event){
@@ -777,32 +822,66 @@ var counterClones = 0;
 	  	$('.SettingsBox').toggle('slide', {direction: 'down'});
 	});
 
+	
+
 	var solution = 0;
 
-	// Reset button click
-	$("#resetBtn").click(function() {
-		$('.pricebox').addClass('active');
- 	  	$(".currentprice").addClass('active');
- 	  	$('.currentprice').hide();
 
- 	  	// Removing the solutions and circle
- 	  	for(var i=solution;i>0;i--) {
- 	  		$('.price-solution'+i+'.newCircle'+i).remove();
- 	  		$('.circle.circle'+i).remove();
- 	  	}
- 	  	$('.pricebox').not('[data-box=currentprice]').remove();
- 	  	$('.circle.circle0 > img').remove();
- 	  	$('.circle.circle0').show();
- 	  	manage_arrow($('.pricebox').children('[id*="arrow"]'),false,true,true);
- 	  	$('.currentprice .myservice').remove();
- 	  	$('#currentPriceValue').text('0');
- 	  	$('.sidebar2').hide();
- 	  	$('.sidebar1').show();
+	// Reset button click 
+	  
 
- 	  	// Resetting the solution to 0
-		solution = 0;
-	  	$('.SettingsBox').toggle('slide', {direction: 'down'});
-	});
+	  $('#resetBtn').click(function(){
+	  	$('#reset').attr('title', 'Restart?')
+	  			.dialog({
+	  				buttons: {
+	  				'Reset': function(){
+	          		
+
+					   $('.pricebox').addClass('active'); 
+				       $(".currentprice").addClass('active'); 
+				       $('.currentprice').hide(); 
+				 
+				       // Removing the solutions and circle 
+				       for(var i=solution;i>0;i--) { 
+				         $('.price-solution'+i+'.newCircle'+i).remove(); 
+				         $('.circle.circle'+i).remove(); 
+				       } 
+				       $('.pricebox').not('[data-box=currentprice]').remove(); 
+				       $('.circle.circle0 > img').remove(); 
+				       $('.circle.circle0').show(); 
+				       manage_arrow($('.pricebox').children('[id*="arrow"]'),false,true,true); 
+				       $('.currentprice .myservice').remove(); 
+				       $('#currentPriceValue').text('0'); 
+				       $('.sidebar2').hide(); 
+				       $('.sidebar1').show(); 
+				 
+				       // Resetting the solution to 0 
+				    	solution = 0; 
+				    	startDraggable(solution);
+				      $('.SettingsBox').toggle('slide', {direction: 'down'}); 
+						  
+
+	          		  $(this).dialog('close');
+	          		
+
+	  			},
+	  		}, closeOnEscape: true,
+	  				draggable: false,
+	  				resizable: false,
+	  				show: 'fade',
+	          		hide: 'fade',
+	  				modal: true,  // you can't click anywhere else before you close the modal box
+	  				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
+			        dialogClass: 'sendMailDialog',
+			        width: 490,
+			        height: 305,
+			        'z-index': 999999
+	  			});
+         	
+	  });
+
+
+
 
 	startDraggable(solution);
 
@@ -824,8 +903,8 @@ var counterClones = 0;
 						var clonedPrice = $('.pricebox.active .pricetext .kroner').html();
 
 						$('.pricebox').removeClass('active');
-				 	  	$(".currentprice").removeClass('active');
-						$(".solution_box").removeClass('active');
+						$(".currentprice").removeClass('active'); 
+            			$(".solution_box").removeClass('active'); 
 						// Add the menu in footer
 						var selector = $('.main-footer .row .SettingsBox');
 						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
@@ -869,9 +948,8 @@ var counterClones = 0;
 				      	solution++;
 						//Change active bottom tab
 						$('.pricebox').removeClass('active');
-				 	  	$(".currentprice").removeClass('active');
-						$(".solution_box").removeClass('active');
-
+						$(".currentprice").removeClass('active'); 
+            			$(".solution_box").removeClass('active'); 
 						// Add the menu in footer
 						var selector = $('.main-footer .row .SettingsBox');
 						var priceBox = $('<div class="pricebox active" data-box="newCircle'+ solution +'" data-num-solution="'+ solution +'"></div>');
@@ -890,9 +968,19 @@ var counterClones = 0;
 						//add the slide
 						var slide = $('<div class="col-sm-3 price-solution'+ solution +' solution_box newCircle'+ solution +'"></div>');
 						var menuheader = $('<div class="menuheader after_here"></div>');
+						 //the new divs that corresponds to every category
+                       var slideContent = $('<div class="slide-div slide-mobilabonnement hidden"><h5>MOBILABONNEMENT</h5></div>' +
+                           '<div class="slide-div slide-mobilbred hidden"><h5>MOBILBRED</h5></div>' +
+                           '<div class="slide-div slide-bredband hidden"><h5>BREDBAND</h5></div>'+
+                           '<div class="slide-div slide-tv hidden"><h5>TV</h5></div>'+
+                           '<div class="slide-div slide-tvbredband hidden"><h5>TV BREDBAND</h5></div>'+
+                           '<div class="slide-div slide-extraservices hidden"><h5>EXTRASERVICES</h5></div>'
+                       );
+                       //
 						var h2 = $('<h2>Månedlig ydelse</h2><hr>');
-						h2.appendTo(menuheader)
-						menuheader.appendTo(slide)
+						h2.appendTo(menuheader);
+						menuheader.appendTo(slide);
+						slideContent.appendTo(slide);
 						slide.insertAfter('.currentprice');
 
 						//add the circle for slider
@@ -920,7 +1008,7 @@ var counterClones = 0;
 			}
 			dialogue_buttons_array.push(dialogue_button_2);
 
-			$('#dialog').attr('title', 'Tilføj Løsning')
+			$('#sdialog').attr('title', 'Tilføj Løsning')
 	  			.text("Tilføj løsning")
 	  			//.html('<h1>Kopier løsning 1?</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>')
 	  			.dialog({
@@ -932,7 +1020,7 @@ var counterClones = 0;
 				hide: 'fade',
 				modal: true,  // you can't click anywhere else before you close the modal box
 				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
-				dialogClass: 'sendMailDialog',
+				dialogClass: 'tilfojLosningDialog',
 				width: 490,
 				height: 305,
 				//'z-index': 999999
@@ -967,15 +1055,15 @@ var counterClones = 0;
  	  		manage_arrow($('.pricebox.active').children('[id*="arrow"]'),false,false);		
  	  	}
 
- 	  	$(".currentprice").removeClass('active');
+ 	  	$(".currentprice").removeClass('active'); 
 		$(".pricebox").removeClass('active');
 		$(".solution_box").removeClass('active');
 	  	$(".pricebox[data-box='"+ target+"']").addClass('active');
-	  	if(target === 'currentprice') {
-	  		$(".currentprice").addClass('active');
-	  	} else {
-	  		$(".solution_box."+ target).addClass('active');
-	  	}
+	  	if(target === 'currentprice') { 
+        $(".currentprice").addClass('active'); 
+	      } else { 
+	        $(".solution_box."+ target).addClass('active'); 
+	      } 
 
 	  	$(".circle").hide();
 	  	$(".circle[data-circle='"+ target+"']").show();
@@ -1059,7 +1147,8 @@ var counterClones = 0;
 
 
 				$(".myservice[data-clone-service='"+serviceToRemove+"']").remove();
-                // alert("maybe ?");
+				$(".serviceHeader[data-clone-service='"+serviceToRemove+"']").remove();
+               
             });
 
         },
@@ -1069,11 +1158,16 @@ var counterClones = 0;
 			var service =$(ui.draggable).data('service');
 			console.log($(ui.draggable));
 			var newService='';
+			var type = '';
+			var serviceHeader = '';
+
 			for (var i = 0; i < currentMenu.length; i++) {
 				if(currentMenu[i].slug == service){
+					type = currentMenu[i].type;
+					serviceHeader = '<p class="serviceHeader">'+currentMenu[i].name+'<span>'+currentMenu[i].price+' Kr.</span> </p>';
 					newService = currentMenu[i].html;
-					console.log(newService);
-
+					// console.log(newService);
+					console.log("HERE I AM: " + serviceHeader);
 					//when it+s not currentprice tab
 					if( !$('.pricebox[data-box="currentprice"]').hasClass('active') ){
 						var newPrice = currentMenu[i].price;
@@ -1093,14 +1187,64 @@ var counterClones = 0;
 			console.log(newL);
 
 			var targetBox = $('.pricebox.active').data('box');
-			var draggableId = ui.draggable.attr("id");
-			
+			var draggableId = ui.draggable.attr("id"); 
+
 			// Adding newservice if it has been dragged
 			if(dragged == true){
-				$('.'+targetBox+' .after_here').after(newService);
-				if (draggableId !== 'other') {
-					$("."+targetBox+" .myservice:first").attr('data-clone-service','clone'+counterClones);
+
+				// -----------------------------------------------------------------------------------
+				//getting the right divSlider depending on the type
+            	var targetDivSlider ="";
+            	//switch is more efficinet than the if statement
+				//check the type of the droppeble.
+            	switch (type)
+				{
+					case "mobilabonement":
+						targetDivSlider = $('.slide-mobilabonnement');
+						targetDivSlider.removeClass('hidden');
+						break;
+                    case "mobilbred":
+                        targetDivSlider = $('.slide-mobilbred');
+                        targetDivSlider.removeClass('hidden');
+                        break;
+                    case "tv":
+                        targetDivSlider = $('.slide-tv');
+                        targetDivSlider.removeClass('hidden');
+                        break;
+                    case "bredband":
+                        targetDivSlider = $('.slide-bredband');
+                        targetDivSlider.removeClass('hidden');
+                        break;
+                    case "tvbredband":
+                        targetDivSlider = $('.slide-tvbredband');
+                        targetDivSlider.removeClass('hidden');
+                        break;
+					case "services":
+						targetDivSlider = $('.slide-extraservices');
+                        targetDivSlider.removeClass('hidden');
+                        break;
+                    case "":
+						//if type is empty that means we need to add only to the default slider.
+						//so we do not append the hearder.
+						$('.'+targetBox+' .after_here').after(newService);
+						break;
+					default :
+						targetDivSlider = targetBox;
+						break;
 				}
+				//append the service header: the title and price
+				//append the new sevice that is dropped
+				// $(serviceHeader).insertBefore(".bullets");
+                $(newService).prepend(serviceHeader);
+            	console.log("hhhhhh "+ newService)
+				$(targetDivSlider).append(newService);
+				// -------------------------------------------------------------------------------------
+
+				// $('.'+targetBox+' .after_here').after(newService);
+                if (draggableId !== 'other') { 
+		          $("."+targetBox+" .myservice:first").attr('data-clone-service','clone'+counterClones);
+		          $("."+targetBox+" .serviceHeader:first").attr('data-clone-service','clone'+counterClones); 
+		        } 
 				dragged = false;
 			}
 			 //dont copy when dragged in the box -> give it a class called dropped
@@ -1117,6 +1261,8 @@ var counterClones = 0;
 			        })
 	             )
          	}
+
+
          	console.log(ui);
 
          	// the second condition is added to make sure that the dialog box is display only on first time. once the values are set, the dialog box will not appear on dragging and dropping
@@ -1124,9 +1270,14 @@ var counterClones = 0;
          		// an reference to circle object is created because $(this) will not work inside the click function of the button
          		var obj_circle = $(this);
          		
-         		$('#dialog').attr('title', 'Tilføj andet service')
-         		.html('<input type="text" placeholder="Navn" class="name_other_dialog"/><input type="number" placeholder="Beløb"  class="number_other_dialog" /><input type="radio" />Pr. MD <input type="radio" />Engangsbeløb')
-	  			.dialog({
+         		$('#andet').attr('title', 'ANDET')
+                    .html('<input type="text" placeholder="NAVN" class="name_other_dialog"/>' +
+                        '<div class="dialog-row"><input type="number" placeholder="BELØB KR. "  class="number_other_dialog" />' +
+                        '<span class="wrapper-input-radio">' +
+                        '<div class="check-border"><div class="check"></div></div><span class="dialog-text"> Pr. MD</span>' +
+                        '<div class="check-border"><div class="check check-active"></div></div><span class="dialog-text">Engangsbeløb</span>' +
+                        '</span>' +
+                        '</div>')	  			.dialog({
 	  				buttons: [
 	  				{
 	  					text: "Tilføj",
@@ -1169,9 +1320,9 @@ var counterClones = 0;
 	          		hide: 'fade',
 	  				modal: true,  // you can't click anywhere else before you close the modal box
 	  				//position: 'top', // center is default // you can also pass it an array [100, 100] which is x and y
-			        dialogClass: 'sendMailDialog',
-			        width: 490,
-			        height: 305,
+			        dialogClass: 'andetDialog',
+			        width: 467,
+			        height: 406,
 			        'z-index': 999999
 	  			});
          	}
@@ -1202,19 +1353,18 @@ var counterClones = 0;
 function manage_arrow(arrow_object, toggle, active, reset) {
 	  	var new_arrow;
 	  	var arrow_array = ['uparrow', 'downarrow'];
-
 	  	if(reset === true) {
 	  		new_arrow = 0;
 	  	} else {
-		  	if(arrow_object.attr('src') === 'img/uparrow.jpg' || arrow_object.attr('src') === 'img/uparrow2.jpg') {
-		  		new_arrow = 0;
-		  	} else {
-		  		new_arrow = 1;
-		  	}
-
-		  	if(toggle === true) {
-		  		new_arrow = 1 - new_arrow;
-		  	}
+	  		if(arrow_object.attr('src') === 'img/uparrow.jpg' || arrow_object.attr('src') === 'img/uparrow2.jpg') { 
+	          new_arrow = 0; 
+	        } else { 
+	          new_arrow = 1; 
+	        } 
+	 
+	        if(toggle === true) { 
+	          new_arrow = 1 - new_arrow; 
+	        } 
 	  	}
 
 	  	new_arrow = arrow_array[new_arrow];
