@@ -801,6 +801,7 @@ var counterClones = 0;
 
  	  	// Resetting the solution to 0
 		solution = 0;
+		startDraggable(solution);
 	  	$('.SettingsBox').toggle('slide', {direction: 'down'});
 	});
 
